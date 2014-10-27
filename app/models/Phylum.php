@@ -4,6 +4,7 @@
 		public $timestamps = false;
 		protected $table = 'phylum';
 		protected $guarded = ['id'];
+		protected $info = ['name'];
 
 		public function subphylum(){
 			return $this->hasMany('Subphylum');
@@ -18,7 +19,7 @@
 		}
 
 		public function children() {
-			return $this->subkingdom;
+			return $this->subphylum;
 		}
 
 		public function child(){

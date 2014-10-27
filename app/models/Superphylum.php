@@ -4,6 +4,7 @@
 		public $timestamps = false;
 		protected $table = 'superphylum';
 		protected $guarded = ['id'];
+		protected $info = ['name'];
 
 		public function phylum(){
 			return $this->hasMany('Phylum');

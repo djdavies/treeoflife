@@ -19,6 +19,10 @@
 		}
 
 		public function child(){
-			return 'kingdoms';
+			return 'kingdom';
+		}
+
+		public function parenturl(){
+			return URL::route('tree', [strtolower(get_class($this->parent()))]);
 		}
 	}

@@ -56,8 +56,9 @@ class HSapianTreeTableSeeder extends Seeder{
 		Tribe::truncate();
 		Subtribe::truncate();
 		
+		$summary = 'A eukaryote  is any organism whose cells contain a nucleus and other structures (organelles) enclosed within membranes';
 
-		$dom = Domain::create(['name' => 'Eukaryota']);
+		$dom = Domain::create(['name' => 'Eukaryota', 'summary'=>$summary]);
 		$king = $dom->kingdoms()->create(['name' => 'Animalia']);
 		$subki = $king->subkingdom()->create(['name' => 'Eumetazoa']);
 		$superph = $subki->superphylum()->create(['name' => 'Deuterostomia']);
@@ -98,5 +99,60 @@ class HSapianTreeTableSeeder extends Seeder{
 			'cranial_mass' => '1498.5'
 		]);
 
+		$domainData = [
+			'Archaea',
+			'Bacteria'
+		];
+
+		foreach($domainData as $domain){
+			DB::table('domain')->insert([
+				['name' => $domain]
+			]);
+		}
+
+		$kingdomData =[
+			[
+				'name' => 'Amoebozoa',
+				'summary' => 'The Amoebozoa are a major group of amoeboid protozoa, including the majority that move by means of internal cytoplasmic flow. Their pseudopodia are characteristically blunt and finger-like, called lobopodia. Most are unicellular, and are common in soils and aquatic habitats, with some found as symbiotes of other organisms, including several pathogens. The Amoebozoa also include the slime moulds, multinucleate or multicellular forms that produce spores and are usually visible to the unaided eye.',
+			],
+			[
+				'name' => 'Archaeplastida',
+				'summary' => 'The Archaeplastida (or Plantae sensu lato - in the broad sense) are a major group of eukaryotes, comprising the red algae (Rhodophyta), the green algae and the land plants, together with a small group of freshwater unicellular algae called glaucophytes. The chloroplasts of all these organisms are surrounded by two membranes, suggesting they developed directly from endosymbiotic cyanobacteria. In all other groups, the chloroplasts are surrounded by three or four membranes, suggesting they were acquired secondarily from red or green algae.',
+			],
+			[
+				'name' => 'Chromalveolata',
+				'summary' => 'The Rhizaria are a species-rich supergroup of mostly unicellular eukaryotes. A multicellular form has recently been described. This supergroup was proposed by Cavalier-Smith in 2002. They vary considerably in form, but for the most part they are amoeboids with filose, reticulose, or microtubule-supported pseudopods. Many produce shells or skeletons, which may be quite complex in structure, and these make up the vast majority of protozoan fossils. Nearly all have mitochondria with tubular cristae.',
+			],
+			[
+				'name' => 'Rhizaria',
+				'summary' => 'The Rhizaria are a species-rich supergroup of mostly unicellular eukaryotes. A multicellular form has recently been described. This supergroup was proposed by Cavalier-Smith in 2002. They vary considerably in form, but for the most part they are amoeboids with filose, reticulose, or microtubule-supported pseudopods. Many produce shells or skeletons, which may be quite complex in structure, and these make up the vast majority of protozoan fossils. Nearly all have mitochondria with tubular cristae.',
+			],
+			[
+				'name' => 'Excavata',
+				'summary' => 'The excavates are a major subgroup of unicellular eukaryotes, often known as Excavata. The phylogenetic category Excavata, proposed by Cavalier-Smith in 2002, contains a variety of free-living and symbiotic forms, and also includes some important parasites of humans.',
+			],
+			[
+				'name' => 'Fungi',
+				'summary' => 'A fungus is any member of a large group of eukaryotic organisms that includes microorganisms such as yeasts and molds (British English: moulds), as well as the more familiar mushrooms. These organisms are classified as a kingdom, Fungi, which is separate from plants, animals, protists, and bacteria. One major difference is that fungal cells have cell walls that contain chitin, unlike the cell walls of plants and some protists, which contain cellulose, and unlike the cell walls of bacteria.',
+			],
+		];
+
+		foreach($kingdomData as $kingdom){
+			DB::table('kingdom')->insert([
+				[
+					'name' => $kingdom['name'],
+					'summary' => $kingdom['summary'],
+					'domain_id' => 1
+				]
+			]);
+		}
+
+		DB::table('kingdom')->insert([
+			[
+				'name' => 'Eubacteria',
+				'summary' => '',
+				'domain_id' => 3
+			]
+		]);
 	}
-}
+}			

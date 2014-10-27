@@ -4,6 +4,7 @@
 		public $timestamps = false;
 		protected $table = 'subphylum';
 		protected $guarded = ['id'];
+		protected $info = ['name'];
 
 		public function infraphylum(){
 			return $this->hasMany('Infraphylum');

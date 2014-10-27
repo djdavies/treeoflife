@@ -4,6 +4,7 @@
 		public $timestamps = false;
 		protected $table = 'infraclass';
 		protected $guarded = ['id'];
+		protected $info = ['name'];
 
 		public function subcohort(){
 			return $this->hasMany('Subcohort');

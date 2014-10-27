@@ -1,6 +1,9 @@
 @extends('master')
 	@section('header')
 		<!--Page to display all {{{ get_class($classes) }}} -->
+		<div class="row">
+			<span class="pull-right"><a href="{{ $classes->showChildren() }}">{{ $classes->child() }} &rarr; </a></span>
+		</div>
 		<h2> 
 			All {{{ get_class($classes) }}}
 			<a href="#" class="btn btn-primary pull-right">
@@ -10,21 +13,28 @@
 		@stop
 
 		@section('content')
-			<div class="tree">
-				<ul>
-					<li>
-						<a href="#">{{ get_class($classes) }}</a>
+			<div class="row">
+				<div class="col-md-12">
+					<h3>Tree View</h3>
+				</div>
+				<div class="col-md-12 col-md-offset-1">
+					<div class="tree">
 						<ul>
-							@foreach($classification as $content)
-								<li>
-									<a href="{{ $classes->childurl() }}">
-										{{{ $content->name }}} 
-									</a>
-								</li>
-							@endforeach
-						</ul>	
-					</li>
-				</ul>
+							<li>
+								<a>{{ get_class($classes) }}</a>
+								<ul>
+									@foreach($classification as $content)
+										<li>
+											<a href='{{$content->childrenurl($content->id)}}'>
+												{{{ $content->name }}} 
+											</a>
+										</li>
+									@endforeach
+								</ul>	
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		@stop
 	

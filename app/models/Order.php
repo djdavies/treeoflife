@@ -4,6 +4,7 @@
 		public $timestamps = false;
 		protected $table = 'order';
 		protected $guarded = ['id'];
+		protected $info = ['name'];
 
 		public function suborder(){
 			return $this->hasMany('Suborder');

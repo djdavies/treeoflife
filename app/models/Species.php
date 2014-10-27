@@ -23,4 +23,8 @@ class Species extends Classification{
 	public function child(){
 			return null;
 	}
+
+	public function childurl($id){
+		return URL::route('tree', [strtolower(get_class($this)).'/'.$id]);
+	}
 }

@@ -4,6 +4,7 @@
 		public $timestamps = false;
 		protected $table = 'infralegion';
 		protected $guarded = ['id'];
+		protected $info = ['name'];
 
 		public function subclass(){
 			return $this->hasMany('Subclass');

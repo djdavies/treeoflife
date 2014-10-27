@@ -4,6 +4,7 @@
 		public $timestamps = false;
 		protected $table = 'subtribe';
 		protected $guarded = ['id'];
+		protected $info = ['name'];
 
 		public function genus(){
 			return $this->hasMany('Genus');

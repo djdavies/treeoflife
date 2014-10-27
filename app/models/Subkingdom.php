@@ -4,6 +4,7 @@
 		public $timestamps = false;
 		protected $table = 'subkingdom';
 		protected $guarded = ['id'];
+		protected $info = ['name'];
 
 		public function superphylum(){
 			return $this->hasMany('Superphylum');

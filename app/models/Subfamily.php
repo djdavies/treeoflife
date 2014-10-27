@@ -4,6 +4,7 @@
 		public $timestamps = false;
 		protected $table = 'subfamily';
 		protected $guarded = ['id'];
+		protected $info = ['name'];
 
 		public function tribe(){
 			return $this->hasMany('Tribe');

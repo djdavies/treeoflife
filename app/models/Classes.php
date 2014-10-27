@@ -4,6 +4,7 @@
 		public $timestamps = false;
 		protected $table = 'classes';
 		protected $guarded = ['id'];
+		protected $info = ['name'];
 
 		public function superlegion(){
 			return $this->hasMany('Superlegion');

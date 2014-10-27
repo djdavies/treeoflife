@@ -4,6 +4,7 @@
 		public $timestamps = false;
 		protected $table = 'infraorder';
 		protected $guarded = ['id'];
+		protected $info = ['name'];
 
 		public function parvorder(){
 			return $this->hasMany('Parvorder');

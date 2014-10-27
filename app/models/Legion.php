@@ -4,6 +4,7 @@
 		public $timestamps = false;
 		protected $table = 'legion';
 		protected $guarded = ['id'];
+		protected $info = ['name'];
 
 		public function sublegion(){
 			return $this->hasMany('Sublegion');
@@ -14,11 +15,11 @@
 		}
 
 		public function parent() {
-			return $this->sublegion;
+			return $this->superlegion;
 		}
 
 		public function children() {
-			return $this->superlegion;
+			return $this->sublegion;
 		}
 
 		public function child(){

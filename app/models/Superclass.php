@@ -4,6 +4,7 @@
 		public $timestamps = false;
 		protected $table = 'superclass';
 		protected $guarded = ['id'];
+		protected $info = ['name'];
 
 		public function classes(){
 			return $this->hasMany('Classes');

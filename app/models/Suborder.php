@@ -4,6 +4,7 @@
 		public $timestamps = false;
 		protected $table = 'suborder';
 		protected $guarded = ['id'];
+		protected $info = ['name'];
 
 		public function infraorder(){
 			return $this->hasMany('Infraorder');

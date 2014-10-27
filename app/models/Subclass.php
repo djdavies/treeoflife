@@ -4,6 +4,7 @@
 		public $timestamps = false;
 		protected $table = 'subclass';
 		protected $guarded = ['id'];
+		protected $info = ['name'];
 
 		public function infraclass(){
 			return $this->hasMany('Infraclass');

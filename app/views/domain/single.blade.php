@@ -26,17 +26,6 @@
 							<ul>
 								<li>
 									<a href="#">{{$item->name}}</a>
-									<ul>
-										<li>
-											<a href="#">{$i{Ttem->name}}</a>
-										</li>
-										<li>
-											<a href="#">{$i{Ttem->name}}</a>
-										</li>
-										<li>
-											<a href="#">{$i{Ttem->name}}</a>
-										</li>
-									</ul>
 								</li>
 							</ul>
 						</li>

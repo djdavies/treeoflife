@@ -5,12 +5,6 @@
 		<title>Project Yggdrasil</title>
 		<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}"/>
 		<link rel="stylesheet" href="{{asset('css/custom_bootstrap.css')}}"/>
-		{{ HTML::script('javascript/jquery-2.1.1.js') }}
-		{{ HTML::script('javascript/siteFunctions.js') }}
-
-		<script type="text/javascript">
-			$
-		</script>
 	</head>
 	<body>
 		<div class="container height-buffer">
@@ -79,5 +73,7 @@
 			</nav>
 		</div>	
 	</body>
-
+	{{ HTML::script('javascript/jquery-2.1.1.js') }}
+	{{ HTML::script('javascript/bootstrap.js') }}
+	{{ HTML::script('javascript/siteFunctions.js') }}
 </hmtl>

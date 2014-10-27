@@ -1,6 +1,8 @@
 
 $(document).ready(function(){
 
+	$('a.bs-docs-popover').popover({html : true});
+
 	$("#sign_in").click(function() {
 		$("#sign_out").slideToggle(1);
 		$(this).slideToggle(1);

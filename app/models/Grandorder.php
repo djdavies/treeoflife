@@ -4,6 +4,7 @@
 		public $timestamps = false;
 		protected $table = 'grandorder';
 		protected $guarded = ['id'];
+		protected $info = ['name'];
 
 		public function mirorder(){
 			return $this->hasMany('Mirorder');

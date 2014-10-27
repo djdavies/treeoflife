@@ -4,7 +4,8 @@
 		public $timestamps = false;
 		protected $table = 'superorder';
 		protected $guarded = ['id'];
-
+		protected $info = ['name'];
+		
 		public function grandorder(){
 			return $this->hasMany('Grandorder');
 		}

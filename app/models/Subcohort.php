@@ -4,6 +4,7 @@
 		public $timestamps = false;
 		protected $table = 'subcohort';
 		protected $guarded = ['id'];
+		protected $info = ['name'];
 
 		public function magnorder(){
 			return $this->hasMany('Magnorder');

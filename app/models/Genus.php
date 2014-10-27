@@ -3,6 +3,7 @@
 	class Genus extends Classification{
 		public $timestamps = false;
 		protected $guarded = ['id'];
+		protected $info = ['name'];
 
 		public function species(){
 			return $this->hasMany('Species');

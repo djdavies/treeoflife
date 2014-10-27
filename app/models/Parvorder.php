@@ -4,6 +4,7 @@
 		public $timestamps = false;
 		protected $table = 'parvorder';
 		protected $guarded = ['id'];
+		protected $info = ['name'];
 
 		public function superfamily(){
 			return $this->hasMany('Superfamily');

@@ -4,7 +4,6 @@
 		public $timestamps = false;
 		protected $table = 'kingdom';
 		protected $guarded = ['id'];
-		//returned in the abstract method
 		protected $info = ['name'];
 
 		public function subkingdom(){
@@ -25,6 +24,6 @@
 		}
 
 		public function child(){
-			return 'subkingdoms';
+			return 'subkingdom';
 		}
 	}

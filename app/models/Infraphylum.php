@@ -4,6 +4,7 @@
 		public $timestamps = false;
 		protected $table = 'infraphylum';
 		protected $guarded = ['id'];
+		protected $info = ['name'];
 
 		public function superclass(){
 			return $this->hasMany('Superclass');
