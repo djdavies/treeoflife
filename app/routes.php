@@ -100,16 +100,16 @@ Route::group(array('before'=>'auth'), function(){
 		}
 	});
 
-	View::composer('species.edit', function($view){
-		$genus = Genus::all();
-		if(count($genus)>0){
-			$genus_options = array_combine($genus->lists('id'), 
-										   $genus->lists('name'));
+	View::composer('classification.edit', function($view){
+		$classes = Genus::all();
+		if(count($classes)>0){
+			$classes_options = array_combine($classes->lists('id'),
+										   $classes->lists('name'));
 		}else{
-			$genus_options = array_combine(NULL, 'Unspecified');
+			$classes_options = array_combine(NULL, 'Unspecified');
 		}
 
-		$view->with('genus_options', $genus_options);
+		$view->with('classes_options', $classes_options);
 	});
 });
 

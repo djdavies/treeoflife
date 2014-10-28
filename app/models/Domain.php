@@ -29,4 +29,8 @@
         public function getParentName(){
             return 'LUCA';
         }
+
+        public function getPossibleParents() {
+            // TODO: Implement getPossibleParents() method.
+        }
     }

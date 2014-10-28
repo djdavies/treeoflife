@@ -24,7 +24,7 @@
 				) 
 			}}
 			
-            @unless($method == 'delete')
+            @if($method !== 'delete')
                 <div class="row">
                     @foreach($classification->info() as $formField)
                         <div class="form-group col-md-5">
@@ -45,9 +45,12 @@
                 <div class="row">
                     {{ Form::label($classification->getParentName()) }}
 
-                    {{
-                        var_dump($classification->getPossibleParents());
-                        Form::select('size', array('L' => 'Large', 'S' => 'Small'), 'S'); }}
+                    <select name="classication_id">
+                        {{ var_dump($classification->parent())  }}
+                        @foreach($classification->getPossibleParents()->all() as $thing)
+                            <option value="{{ $thing->id }}">{{ $thing->name }}</option>
+                        @endforeach
+                    </select>
                 </div>
 
                 <div class="row">

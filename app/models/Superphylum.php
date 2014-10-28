@@ -25,4 +25,12 @@
 		public function getChildName(){
 			return 'phylum';
 		}
-	}
+
+        public function getParentName() {
+            // TODO: Implement getParentName() method.
+        }
+
+        public function getPossibleParents() {
+            // TODO: Implement getPossibleParents() method.
+        }
+    }

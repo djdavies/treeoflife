@@ -16,7 +16,7 @@ $(document).ready(function(){
 		}
 	});
 
-	$('form.login').submit( function (e) {
+	$('form.login').submit( function () {
 		var formInputs = $(this).find('input.form-control');
 		if(!checkInputFields(formInputs)){
         	return false;
@@ -27,7 +27,7 @@ $(document).ready(function(){
 	/**
 	 * [checkInputFields this function is used to iterate through methods so that it can check whether fields
 	 * have been filled in. If a required field is empty it will ]
-	 * @param  {[array]} inputs [an array inputs recieved from the form we wish to validate]
+	 * @param  {[array]} inputs [an array inputs received from the form we wish to validate]
 	 * @return {[boolean]}  [returns true or false depending on its success]
 	 */
 	function checkInputFields(inputs){

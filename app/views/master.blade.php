@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<hmtl lang="en">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<title>Project Yggdrasil</title>
@@ -76,4 +76,4 @@
 	{{ HTML::script('javascript/jquery-2.1.1.js') }}
 	{{ HTML::script('javascript/bootstrap.js') }}
 	{{ HTML::script('javascript/siteFunctions.js') }}
-</hmtl>
+</html>

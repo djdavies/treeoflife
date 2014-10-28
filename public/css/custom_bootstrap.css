@@ -27,15 +27,6 @@ body{
 	display: none;
 }
 
-.col-centered {
-    display:inline-block;
-    float:none;
-    /* reset the text-align */
-    text-align: center;
-    /* inline-block space fix */
-    margin-right:-4px;
-}
-
 /*CSS to manage the tree*/
 * {margin: 0; padding: 0;}
 
@@ -134,9 +125,5 @@ right connector from last child*/
 .tree li a:hover+ul::before, 
 .tree li a:hover+ul ul::before{
 	border-color:  #94a0b4;
-}
-
-.tree .btn-default{
-	font-size: 12px;
 }
 

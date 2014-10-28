@@ -33,6 +33,7 @@ class Species extends Classification{
     }
 
     public function getPossibleParents() {
-        return  DB::table('genera')->select('id', 'name')->get();
+        return new Genus();
+        //DB::table('genera')->select('id', 'name')->get()
     }
 }
