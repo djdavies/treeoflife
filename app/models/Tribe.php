@@ -22,7 +22,7 @@
 			return $this->subtribe;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'subtribe';
 		}
 	}

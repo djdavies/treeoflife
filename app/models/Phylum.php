@@ -22,7 +22,11 @@
 			return $this->subphylum;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'subphylum';
 		}
-	}
+
+        public function getParentName() {
+            // TODO: Implement getParentName() method.
+        }
+    }

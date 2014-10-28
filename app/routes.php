@@ -21,7 +21,7 @@ Route::get('about', function(){
 Route::get('tree/{classification}', function($classification){
 	$classes = new $classification;
 	$items = $classes::all();
-	return View::make('domain.class')
+	return View::make('classification.class')
 		->with("classification", $items)
 		->with('classes', $classes);
 });
@@ -29,7 +29,7 @@ Route::get('tree/{classification}', function($classification){
 
 Route::get('tree/{classification}/{id}/children', function($classification, $id){
 	$class = $classification::find($id);
-	return View::make('domain.index')
+	return View::make('classification.index')
 		->with("classification", $class);
 });
 
@@ -41,7 +41,7 @@ Route::get('tree/{classification}/{id?}', [
 			? $model::find($id)
 			: $model::first();
 		
-		return View::make('domain.single')
+		return View::make('classification.single')
 			->with('item', $item)
 			->with('self', $model);
 	}
@@ -49,22 +49,22 @@ Route::get('tree/{classification}/{id?}', [
 
 //Authorisation these cannot be done unless the user is logged in
 Route::group(array('before'=>'auth'), function(){
-	Route::get('species/create', function() {
-		$species = new species;
-		return View::make('species.edit')
-		->with('species', $species)
+	Route::get('tree/{classification}/create', function($classification) {
+		$class = new $classification;
+		return View::make('classification.edit')
+		->with('classification', $class)
 		->with('method', 'post');
 	});
 
 	Route::get('species/{species}/edit', function(species $species){
-		return View::make('species.edit')
+		return View::make('classification.edit')
 			->with('species', $species)
 			->with('method', 'put');
 	});
 
 	Route::get('species/{species}/delete', function(species $species){
 		if(Auth::user()->canEdit($species)){
-			return View::make('species.edit')
+			return View::make('classification.edit')
 				->with('species', $species)
 				->with('method', 'delete');
 		}else{

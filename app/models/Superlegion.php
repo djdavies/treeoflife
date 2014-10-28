@@ -22,7 +22,7 @@
 			return $this->legion;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'legion';
 		}
 	}

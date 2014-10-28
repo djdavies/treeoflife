@@ -22,7 +22,11 @@
 			return $this->infraphylum;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'infraphylum';
 		}
-	}
+
+        public function getParentName() {
+            // TODO: Implement getParentName() method.
+        }
+    }

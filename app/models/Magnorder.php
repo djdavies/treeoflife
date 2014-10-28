@@ -22,7 +22,11 @@
 			return $this->superorder;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'superorder';
 		}
-	}
+
+        public function getParentName() {
+            // TODO: Implement getParentName() method.
+        }
+    }

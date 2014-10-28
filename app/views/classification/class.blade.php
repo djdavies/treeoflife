@@ -2,11 +2,11 @@
 	@section('header')
 		<!--Page to display all {{{ get_class($classes) }}} -->
 		<div class="row">
-			<span class="pull-right"><a href="{{ $classes->showChildren() }}">{{ $classes->child() }} &rarr; </a></span>
+			<span class="pull-right"><a href="{{ $classes->showChildren() }}">{{ $classes->getChildName() }} &rarr; </a></span>
 		</div>
 		<h2> 
 			All {{{ get_class($classes) }}}
-			<a href="#" class="btn btn-primary pull-right">
+			<a href="{{ $classes->selfUrl().'/create'}}" class="btn btn-primary pull-right">
 				Add a {{{ get_class($classes) }}}
 			</a>
 		</h2>

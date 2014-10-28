@@ -22,7 +22,7 @@
 			return $this->classes;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'classes';
 		}
 	}

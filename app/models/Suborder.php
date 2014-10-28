@@ -22,7 +22,11 @@
 			return $this->infraorder;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'infraorder';
 		}
-	}
+
+        public function getParentName() {
+            // TODO: Implement getParentName() method.
+        }
+    }

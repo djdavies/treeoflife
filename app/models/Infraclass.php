@@ -22,7 +22,11 @@
 			return $this->subcohort;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'subcohort';
 		}
-	}
+
+        public function getParentName() {
+            // TODO: Implement getParentName() method.
+        }
+    }

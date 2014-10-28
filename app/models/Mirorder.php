@@ -22,7 +22,11 @@
 			return $this->order;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'order';
 		}
-	}
+
+        public function getParentName() {
+            // TODO: Implement getParentName() method.
+        }
+    }

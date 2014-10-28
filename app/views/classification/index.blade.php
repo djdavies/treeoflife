@@ -2,7 +2,7 @@
 	@section('header')
 	<!-- Page to display the content of the selected {{{ get_class($classification) }}} -->
 	<h2> 
-		All {{ $classification->child() }} that fall under the {{{ $classification->name.' '.get_class($classification) }}}
+		All {{ $classification->getChildName() }} that fall under the {{{ $classification->name.' '.get_class($classification) }}}
 	</h2>
 	@stop
 

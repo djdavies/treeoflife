@@ -22,7 +22,11 @@
 			return $this->parvorder;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'parvorder';
 		}
-	}
+
+        public function getParentName() {
+            // TODO: Implement getParentName() method.
+        }
+    }

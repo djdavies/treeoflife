@@ -22,7 +22,11 @@
 			return $this->infraclass;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'infraclass';
 		}
-	}
+
+        public function getParentName() {
+            // TODO: Implement getParentName() method.
+        }
+    }

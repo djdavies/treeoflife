@@ -21,7 +21,11 @@
 			return $this->species;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'species';
 		}
-	}
+
+        public function getParentName() {
+            // TODO: Implement getParentName() method.
+        }
+    }

@@ -11,18 +11,22 @@
 		}
 
 		public function parent() {
-			return 'LUCA';
+			return NULL;
 		}
 
 		public function children() {
 			return $this->kingdoms;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'kingdom';
 		}
 
-		public function parenturl(){
+		public function parentUrl(){
 			return URL::route('tree', [strtolower(get_class($this->parent()))]);
 		}
-	}
+
+        public function getParentName(){
+            return 'LUCA';
+        }
+    }

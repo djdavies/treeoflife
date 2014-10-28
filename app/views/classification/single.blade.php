@@ -1,8 +1,8 @@
 @extends('master')
 	@section('header')
-		<a href="javascript:history.go(-1)">Back to {{get_class($self)}} overview</a>
+		<a href="javascript:history.go(-1)">Back to {{ get_class($self) }} overview</a>
 		<h2>
-			{{$item->name}}
+			{{ $item->name }}
 		</h2>
 	@stop
 

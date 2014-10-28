@@ -55,6 +55,8 @@ class HSapianTreeTableSeeder extends Seeder{
 		Family::truncate();
 		Tribe::truncate();
 		Subtribe::truncate();
+        Genus::truncate();
+        Species::truncate();
 		
 		$summary = 'A eukaryote  is any organism whose cells contain a nucleus and other structures (organelles) enclosed within membranes';
 

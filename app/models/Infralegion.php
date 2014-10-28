@@ -22,7 +22,11 @@
 			return $this->subclass;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'subclass';
 		}
-	}
+
+        public function getParentName() {
+            // TODO: Implement getParentName() method.
+        }
+    }

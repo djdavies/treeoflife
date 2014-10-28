@@ -22,7 +22,7 @@
 			return $this->phylum;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'phylum';
 		}
 	}

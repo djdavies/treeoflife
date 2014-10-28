@@ -20,11 +20,19 @@ class Species extends Classification{
 		return $this;
 	}
 
-	public function child(){
+	public function getChildName(){
 			return null;
 	}
 
 	public function childurl($id){
 		return URL::route('tree', [strtolower(get_class($this)).'/'.$id]);
 	}
+
+    public function getParentName() {
+        return 'Genus';
+    }
+
+    public function getPossibleParents() {
+        return  DB::table('genera')->select('id', 'name')->get();
+    }
 }

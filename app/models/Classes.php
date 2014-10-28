@@ -22,7 +22,11 @@
 			return $this->superlegion;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'superlegion';
 		}
-	}
+
+        public function getParentName() {
+            // TODO: Implement getParentName() method.
+        }
+    }

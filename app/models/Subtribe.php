@@ -22,7 +22,11 @@
 			return $this->genus;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'genus';
 		}
-	}
+
+        public function getParentName() {
+            // TODO: Implement getParentName() method.
+        }
+    }

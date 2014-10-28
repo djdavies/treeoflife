@@ -22,7 +22,7 @@
 			return $this->grandorder;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'grandorder';
 		}
 	}

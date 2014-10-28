@@ -14,7 +14,6 @@
 			return $this->belongsTo('Domain');
 		}
 
-
 		public function parent() {
 			return $this->domain;
 		}
@@ -23,7 +22,11 @@
 			return $this->subkingdom;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'subkingdom';
 		}
-	}
+
+        public function getParentName() {
+            // TODO: Implement getParentName() method.
+        }
+    }

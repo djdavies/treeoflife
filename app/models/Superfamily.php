@@ -22,7 +22,7 @@
 			return $this->family;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'family';
 		}
 	}

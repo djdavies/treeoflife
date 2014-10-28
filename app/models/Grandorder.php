@@ -22,7 +22,11 @@
 			return $this->mirorder;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'mirorder';
 		}
-	}
+
+        public function getParentName() {
+            // TODO: Implement getParentName() method.
+        }
+    }

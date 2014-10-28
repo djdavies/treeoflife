@@ -22,7 +22,11 @@
 			return $this->magnorder;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'magnorder';
 		}
-	}
+
+        public function getParentName() {
+            // TODO: Implement getParentName() method.
+        }
+    }

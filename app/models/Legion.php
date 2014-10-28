@@ -22,7 +22,11 @@
 			return $this->sublegion;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'sublegion';
 		}
-	}
+
+        public function getParentName() {
+            // TODO: Implement getParentName() method.
+        }
+    }

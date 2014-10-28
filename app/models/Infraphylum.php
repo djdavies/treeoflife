@@ -22,7 +22,11 @@
 			return $this->superclass;
 		}
 
-		public function child(){
+		public function getChildName(){
 			return 'superclass';
 		}
-	}
+
+        public function getParentName() {
+            // TODO: Implement getParentName() method.
+        }
+    }
