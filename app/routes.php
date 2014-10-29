@@ -18,6 +18,12 @@ Route::get('about', function(){
 	return View::make('about')->with('number_of_species', 10);
 });
 
+ Route::get('tree', function(){
+     $items = LinksTable::where('taxonomic_rank', '=', 1 )->get();
+     return View::make('classification.class')
+         ->with("classification", $items);
+ });
+
 Route::get('tree/{classification}', function($classification){
 	$classes = new $classification;
 	$items = $classes::all();

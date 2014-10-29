@@ -3,7 +3,7 @@
   <component name="ProjectTasksOptions">
     <TaskOptions isEnabled="true">
       <option name="arguments" value="--no-cache --update $FileName$:$FileNameWithoutExtension$.css" />
-      <option name="checkSyntaxErrors" value="true" />
+      <option name="checkSyntaxErrors" value="false" />
       <option name="description" value="Compiles .scss files into .css files" />
       <option name="exitCodeBehavior" value="ERROR" />
       <option name="fileExtension" value="scss" />
@@ -17,8 +17,8 @@
       <option name="passParentEnvs" value="true" />
       <option name="program" value="C:/RailsInstaller/Ruby1.9.3/bin/scss.bat" />
       <option name="scopeName" value="Project Files" />
-      <option name="trackOnlyRoot" value="true" />
-      <option name="workingDir" value="$FileDir$" />
+      <option name="trackOnlyRoot" value="false" />
+      <option name="workingDir" value="C:\Users\User\Desktop\TreeOfLife\treeoflife\public\scss" />
       <envs />
     </TaskOptions>
   </component>

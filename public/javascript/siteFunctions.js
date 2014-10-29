@@ -1,8 +1,6 @@
 
 $(document).ready(function(){
 
-	$('a.bs-docs-popover').popover({html : true});
-
 	$("#sign_in").click(function() {
 		$("#sign_out").slideToggle(1);
 		$(this).slideToggle(1);
@@ -21,6 +19,18 @@ $(document).ready(function(){
 		if(!checkInputFields(formInputs)){
         	return false;
         }
+
+    });
+
+    $('span.label').click(function(event){
+        var form = $(event.target).parent('form').get(0);
+        $(form).submit();
+    });
+
+    $('form').on('submit', function(event){
+        var $id = $(event.target).serializeArray()[1]['value'];
+        alert($id);
+        return false;
     });
 
 

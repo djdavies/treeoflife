@@ -5,7 +5,7 @@
 		<title>Project Yggdrasil</title>
 		<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}"/>
 		<link rel="stylesheet" href="{{asset('css/custom_bootstrap.css')}}"/>
-		<link rel="stylesheet" href="{{asset('css/familytree.css')}}"/>
+		<link rel="stylesheet" href="{{asset('scss/familytree.css')}}"/>
 	</head>
 	<body>
 		<div class="container height-buffer">
