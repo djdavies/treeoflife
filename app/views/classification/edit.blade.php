@@ -51,7 +51,7 @@
                             <option value="{{ $thing->id }}">{{ $thing->name }}</option>
                         @endforeach
                     </select>
-                </div>
+                </div
 
                 <div class="row">
                     <dl class="dl-vertical">
