@@ -24,6 +24,33 @@ Route::get('about', function(){
          ->with("classification", $items);
  });
 
+ Route::get('tree/{id}', function($id){
+    if(Request::ajax()){
+        return Response::json(LinksTable::where('parent_id', '=', $id )->get());
+    };
+ });
+
+ Route::get('getChild/{json}', function($json){
+     if(Request::ajax()) {
+         $arr = json_decode($json, TRUE);
+         $tmpString = "<div class='branch'>";
+             for($i = 0; $i < count($arr); $i++)
+                $tmpString .= "
+                    <div class='entry'>
+                        <form method='POST' action='http://localhost:8000/tree' accept-charset='UTF-8'><input name='_token' type='hidden' value='yRIF8vNcH3GW0SH79cci61hUBhfcKyrzby0kfPVy'>
+                            <span class='label'>".$arr[$i]['name']."</span>
+                            <input type='hidden' value='".$arr[$i]['id']."' name='id'>
+                        </form>
+                    </div>
+                ";
+         return $tmpString.'</div>';
+     }
+ });
+
+
+
+ // old code will need fixing
+
 Route::get('tree/{classification}', function($classification){
 	$classes = new $classification;
 	$items = $classes::all();

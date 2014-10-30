@@ -28,8 +28,13 @@ $(document).ready(function(){
     });
 
     $('form').on('submit', function(event){
-        var $id = $(event.target).serializeArray()[1]['value'];
-        alert($id);
+        var id = $(event.target).serializeArray()[1]['value'];
+        var div = $(event.target).parent('div').get(0);
+        $.get('tree/'+ id, function(data) {
+            $.get("getChild/"+JSON.stringify(data), function(html) {
+                $(div).append(html);
+            });
+        });
         return false;
     });
 
