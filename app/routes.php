@@ -11,7 +11,7 @@
 |
 */
 Route::get('/', function(){
-	return Redirect::route('tree', ['domain']);
+	return Redirect::route('tree');
 });
 
 Route::get('about', function(){
@@ -19,9 +19,11 @@ Route::get('about', function(){
 });
 
  Route::get('tree', function(){
-     $items = LinksTable::where('taxonomic_rank', '=', 1 )->get();
+     $linksTable = new LinksTable;
+     $items = LinksTable::where('taxonomic_rank', '=', 0 )->get();
      return View::make('classification.class')
-         ->with("classification", $items);
+         ->with("classification", $items)
+         ->with('linksTable', $linksTable);
  });
 
  Route::get('tree/{id}', function($id){

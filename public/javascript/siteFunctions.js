@@ -22,21 +22,21 @@ $(document).ready(function(){
 
     });
 
-    $('span.label').click(function(event){
-        var form = $(event.target).parent('form').get(0);
-        $(form).submit();
-    });
-
-    $('form').on('submit', function(event){
-        var id = $(event.target).serializeArray()[1]['value'];
-        var div = $(event.target).parent('div').get(0);
-        $.get('tree/'+ id, function(data) {
-            $.get("getChild/"+JSON.stringify(data), function(html) {
-                $(div).append(html);
-            });
-        });
-        return false;
-    });
+    //$('span.label').click(function(event){
+    //    var form = $(event.target).parent('form').get(0);
+    //    $(form).submit();
+    //});
+    //
+    //$('form').on('submit', function(event){
+    //    var id = $(event.target).serializeArray()[1]['value'];
+    //    var div = $(event.target).parent('div').get(0);
+    //    $.get('tree/'+ id, function(data) {
+    //        $.get("getChild/"+JSON.stringify(data), function(html) {
+    //            $(div).append(html);
+    //        });
+    //    });
+    //    return false;
+    //});
 
 
 	/**

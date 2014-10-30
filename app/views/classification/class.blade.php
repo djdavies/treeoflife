@@ -5,24 +5,19 @@
 		</h2>
 		@stop
 
+
+
+
 		@section('content')
 			<div class="row">
-				<div class="col-md-12">
-
-
-                    <div id="wrapper"><span class="label">LUCA</span>
-                        <div class="branch lv1">
-                            @foreach($classification as $content)
-                                <div class="entry">
-                                    {{ Form::open(array('route' => 'tree')) }}
-                                        <span class="label">{{ $content->name }}</span>
-                                        <input type="hidden" value ="{{ $content->id }}" name="id"/>
-                                    {{ Form::close() }}
-                                </div>
-                            @endforeach
+                <div class="col-md-12">
+                    @foreach($classification as $content)
+                        <div id="wrapper">
+                            <span class="label">{{ $content->name }} </span>
+                                {{ $linksTable->getTree($content->id ); }}
+                            </div>
                         </div>
-                    </div>
-
+                    @endforeach
 
 
               {{--<div class="branch lv1">--}}
