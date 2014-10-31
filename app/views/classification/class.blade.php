@@ -14,12 +14,13 @@
                      <span> Root </span>
                 </div>
             </div>
+
             <div class="row padding-top">
                 <div class="col-md-12">
                     @foreach($classification as $content)
                         <div id="wrapper">
                             <div class="root">
-                                <span class="label">{{ $content->name }} </span>
+                                <span class="label">{{ $content->name }} <span class="pull-right expand-tree">&rArr;</span></span></p>
                                 {{ $linksTable->getTree($content->id ); }}
                             </div>
                         </div>

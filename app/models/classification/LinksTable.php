@@ -22,7 +22,10 @@
                 foreach ($myArray as $key => $value) {
                     if ($value['parent_id'] != $parent_id) continue;
                     echo "<div class='entry sole'>
-                             <span class='label'>".$value['name']."</span>";
+                             <span class='label'>
+                                <span class='contract-tree'>&lArr;</span>".$value['name']."
+                                <span class='pull-right expand-tree'>&rArr;</span>
+                             </span>";
                     $this->getTree($value['id']);
                 }
                 echo '</div></div>';
@@ -30,8 +33,11 @@
                 echo "<div class='branch ".$myArray[0]['taxonomic_rank']." hidden'>";
                 foreach ($myArray as $key => $value) {
                     if ($value['parent_id'] != $parent_id) continue;
-                    echo "<div class='entry'>
-                             <span class='label'>".$value['name']."</span>";
+                    echo "<div class='entry sole'>
+                             <span class='label'>
+                                <span class='contract-tree'>&lArr;</span>".$value['name']."
+                                <span class='pull-right expand-tree'>&rArr;</span>
+                             </span>";
                     $this->getTree($value['id']);
                 }
                 echo '</div></div>';

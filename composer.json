@@ -34,6 +34,7 @@
 		"preferred-install": "dist"
 	},
     "require-dev": {
+        "itsgoingd/clockwork": "dev-master",
         "panique/laravel-sass": "dev-master"
     },
 	"minimum-stability": "stable"
