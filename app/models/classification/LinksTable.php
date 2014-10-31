@@ -14,10 +14,11 @@
 
         public function getTree($parent_id){
             $myArray = $this->getChildren($parent_id);
+            $level = 1;
             if(count($myArray) == 0){
                 echo '</div>';
             }else if(count($myArray) == 1){
-                echo "<div class='branch'>";
+                echo "<div class='branch ".$myArray[0]['taxonomic_rank']." hidden'>";
                 foreach ($myArray as $key => $value) {
                     if ($value['parent_id'] != $parent_id) continue;
                     echo "<div class='entry sole'>
@@ -26,7 +27,7 @@
                 }
                 echo '</div></div>';
             }else{
-                echo "<div class='branch'>";
+                echo "<div class='branch ".$myArray[0]['taxonomic_rank']." hidden'>";
                 foreach ($myArray as $key => $value) {
                     if ($value['parent_id'] != $parent_id) continue;
                     echo "<div class='entry'>
@@ -42,12 +43,7 @@
         public function getParent(){
         }
 
-        public function getDecendents(){
-            $data =  $this::select('id', 'name', 'parent_id', 'taxonomic_rank')
-                ->get()
-                ->toArray();
-            return $this->ConvertToMulti($data);
-        }
+
 
         public function getAncestors(){
 
@@ -57,10 +53,14 @@
             return 'links_tables';
         }
 
+        public function MapDatabase(){
+            $data =  $this::select('id', 'name', 'parent_id', 'taxonomic_rank')
+                ->get()
+                ->toArray();
+            return $this->mapDecendents($data);
+        }
 
-
-
-        function ConvertToMulti($data) {
+        function mapDecendents($data) {
             $fdata = array();
             foreach($data as $k => $v)
             {
@@ -85,8 +85,8 @@
                 if($ldata[$k]['id'] == $idata['parent_id']) {
                     unset($idata['parent_id']);
                     $idata['data'] = array();
-                    $idata['children'] = array();
-                    $ldata[$k]['children'][] = $idata;
+                    $idata[$idata['name']] = array();
+                    $ldata[$k][$idata['name']][] = $idata;
                     return;
                 }
                 else if(!empty($v['children']))

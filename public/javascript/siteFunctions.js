@@ -22,10 +22,12 @@ $(document).ready(function(){
 
     });
 
-    //$('span.label').click(function(event){
-    //    var form = $(event.target).parent('form').get(0);
-    //    $(form).submit();
-    //});
+    $('span.label').dblclick(function(event){
+        var tree = $(event.target).parent('div').get(0);
+        $(tree).find("div.branch.hidden").removeClass('hidden');
+    });
+
+
     //
     //$('form').on('submit', function(event){
     //    var id = $(event.target).serializeArray()[1]['value'];

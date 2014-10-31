@@ -18,7 +18,7 @@ class TestSeeder extends Seeder{
 
         $domainData = [
             'Archaea',
-            'Bacteria',
+            'Eubacteria',
             'Eukaryota'
         ];
         foreach($domainData as $domain){
@@ -48,9 +48,6 @@ class TestSeeder extends Seeder{
                 'parent_id' => 4
             ]);
         }
-
-//        $subtri = $tri->subtribe()->create(['name' => 'hominina']);
-//        $gen1 = $subtri->genus()->create(['name' => 'Homo']);
 
         LinksTable::create([
             'name' => 'Eumetazoa',
