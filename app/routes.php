@@ -26,11 +26,13 @@ Route::get('about', function(){
          ->with('linksTable', $linksTable);
  });
 
-// Route::get('tree/{id}', function($id){
-//    if(Request::ajax()){
-//        return Response::json(LinksTable::where('parent_id', '=', $id )->get());
-//    };
-// });
+ Route::get('search', function(){
+    $data = Input::get('input');
+    if(Request::ajax()){
+        $result = LinksTable::where('name', 'LIKE', "%".$data."%")->get();
+            return Response::json($result);
+    };
+ });
 
 
  // old code will need fixing

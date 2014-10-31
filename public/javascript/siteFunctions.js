@@ -22,24 +22,10 @@ $(document).ready(function(){
 
     });
 
-    $('span.label').dblclick(function(event){
+    $('span.expand-tree').click(function(event){
         var tree = $(event.target).parent('div').get(0);
-        $(tree).find("div.branch.hidden").removeClass('hidden');
+        $("div.branch.hidden").removeClass('hidden');
     });
-
-
-    //
-    //$('form').on('submit', function(event){
-    //    var id = $(event.target).serializeArray()[1]['value'];
-    //    var div = $(event.target).parent('div').get(0);
-    //    $.get('tree/'+ id, function(data) {
-    //        $.get("getChild/"+JSON.stringify(data), function(html) {
-    //            $(div).append(html);
-    //        });
-    //    });
-    //    return false;
-    //});
-
 
 	/**
 	 * [checkInputFields this function is used to iterate through methods so that it can check whether fields
@@ -59,4 +45,31 @@ $(document).ready(function(){
 		}
 		return isValid;
 	}
+
+    var $searchResults = $('.results');
+    $('input.searchbar').on('paste propertychange input', function () {
+        var input = $('input.searchbar').val();
+        if (input.length && $searchResults.hasClass('hidden'))
+            $searchResults.removeClass('hidden');
+        else if (!input.length && !$searchResults.hasClass('hidden')) {
+            $searchResults.addClass('hidden');
+        }
+        $("ul.dropdown-menu.results").empty();
+
+        $.ajax({
+            type: "get",
+            url: "search",
+            data: 'input=' + input,
+            success: function (data) {
+                if(data.length){
+                    for (var i = 0; i < data.length; i++) {
+                        $("<li>" + data[i].taxonomic_rank + ": " + data[i].name + "</li>").appendTo("ul.dropdown-menu.results");
+                    }
+                }else{
+                    $("<li>No Results available</li>" ).appendTo("ul.dropdown-menu.results");
+                }
+            }
+        });
+    });
+
 });

@@ -14,33 +14,28 @@
 
         public function getTree($parent_id){
             $myArray = $this->getChildren($parent_id);
-            $level = 1;
-            if(count($myArray) == 0){
-                echo '</div>';
-            }else if(count($myArray) == 1){
-                echo "<div class='branch ".$myArray[0]['taxonomic_rank']." hidden'>";
-                foreach ($myArray as $key => $value) {
-                    if ($value['parent_id'] != $parent_id) continue;
-                    echo "<div class='entry sole'>
-                             <span class='label'>
-                                <span class='contract-tree'>&lArr;</span>".$value['name']."
-                                <span class='pull-right expand-tree'>&rArr;</span>
-                             </span>";
-                    $this->getTree($value['id']);
+            for($i = 0; $i<3; $i++){
+                if(count($myArray) == 0){
+                    echo '</div>';
+                }else if(count($myArray) == 1){
+                    echo "<div class='branch ".$myArray[0]['taxonomic_rank']." hidden'>";
+                    foreach ($myArray as $key => $value) {
+                        if ($value['parent_id'] != $parent_id) continue;
+                        echo "<div class='entry sole'>
+                             <span class='label'><span class='pull-left contract-tree'>&lArr;</span>".$value['name']."<span class='pull-right expand-tree'>&rArr;</span></span>";
+                        $this->getTree($value['id']);
+                    }
+                    echo '</div></div>';
+                }else{
+                    echo "<div class='branch ".$myArray[0]['taxonomic_rank']." hidden'>";
+                    foreach ($myArray as $key => $value) {
+                        if ($value['parent_id'] != $parent_id) continue;
+                        echo "<div class='entry'>
+                             <span class='label'><span class='pull-left contract-tree'>&lArr;</span>".$value['name']."<span class='pull-right expand-tree'>&rArr;</span></span>";
+                        $this->getTree($value['id']);
+                    }
+                    echo '</div></div>';
                 }
-                echo '</div></div>';
-            }else{
-                echo "<div class='branch ".$myArray[0]['taxonomic_rank']." hidden'>";
-                foreach ($myArray as $key => $value) {
-                    if ($value['parent_id'] != $parent_id) continue;
-                    echo "<div class='entry sole'>
-                             <span class='label'>
-                                <span class='contract-tree'>&lArr;</span>".$value['name']."
-                                <span class='pull-right expand-tree'>&rArr;</span>
-                             </span>";
-                    $this->getTree($value['id']);
-                }
-                echo '</div></div>';
             }
 
         }

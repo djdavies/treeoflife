@@ -17,8 +17,9 @@
 
 		        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		            <form class="navbar-form navbar-left" role="search">
-		            <div class="form-group">
-		                <input type="text" class="form-control" placeholder="Search">
+		            <div class="form-group dropdown">
+		                <input type="text" class="form-control searchbar" placeholder="Search" data-toggle="dropdown">
+		                <ul class="dropdown-menu results hidden" role="menu" aria-labelledby="dLabel"></ul>
 		            </div>
 		          </form>
 		          
