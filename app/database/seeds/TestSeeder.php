@@ -9,11 +9,10 @@ class TestSeeder extends Seeder{
 
 
     public function run(){
-        LinksTable::truncate();
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'LUCA',
-            'taxonomic_rank' => 0
+            'taxa_name' => 1
         ]);
 
         $domainData = [
@@ -23,9 +22,9 @@ class TestSeeder extends Seeder{
         ];
         foreach($domainData as $domain){
 
-            LinksTable::create([
+            Taxon::create([
                 'name' => $domain,
-                'taxonomic_rank' => 1,
+                'taxa_name' => 2,
                 'parent_id' => 1
             ]);
 
@@ -42,178 +41,178 @@ class TestSeeder extends Seeder{
         ];
 
         foreach($kingdomData as $kingdom){
-            LinksTable::create([
+            Taxon::create([
                 'name' => $kingdom,
-                'taxonomic_rank' => 2,
+                'taxa_name' => 3,
                 'parent_id' => 4
             ]);
         }
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Eumetazoa',
-            'taxonomic_rank' => 3,
+            'taxa_name' => 4,
             'parent_id' => 11
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Deuterostomia',
-            'taxonomic_rank' => 4,
+            'taxa_name' => 5,
             'parent_id' => 12
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => "Chordata",
-            'taxonomic_rank' => 5,
+            'taxa_name' => 6,
             'parent_id' => 13
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Vertebrata',
-            'taxonomic_rank' => 6,
+            'taxa_name' => 7,
             'parent_id' => 14
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Gnathostomata',
-            'taxonomic_rank' => 7,
+            'taxa_name' => 8,
             'parent_id' => 15
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Tetrapoda',
-            'taxonomic_rank' => 8,
+            'taxa_name' => 9,
             'parent_id' => 16
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Mammalia',
-            'taxonomic_rank' => 9,
+            'taxa_name' => 10,
             'parent_id' => 17
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Trechnotheria',
-            'taxonomic_rank' => 10,
+            'taxa_name' => 11,
             'parent_id' => 18
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Cladotheria',
-            'taxonomic_rank' => 11,
+            'taxa_name' => 12,
             'parent_id' => 19
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Zatheria',
-            'taxonomic_rank' => 12,
+            'taxa_name' => 13,
             'parent_id' => 20
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Tribosphenida',
-            'taxonomic_rank' => 13,
+            'taxa_name' => 14,
             'parent_id' => 21
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Theria',
-            'taxonomic_rank' => 14,
+            'taxa_name' => 15,
             'parent_id' => 22
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Placentalia',
-            'taxonomic_rank' => 15,
+            'taxa_name' => 16,
             'parent_id' => 23
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Exafroplacentalia',
-            'taxonomic_rank' => 16,
+            'taxa_name' => 17,
             'parent_id' => 24
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Boreoeutheria',
-            'taxonomic_rank' => 17,
+            'taxa_name' => 18,
             'parent_id' => 25
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Euarchontoglires',
-            'taxonomic_rank' => 18,
+            'taxa_name' => 19,
             'parent_id' => 26
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Euarchonta',
-            'taxonomic_rank' => 19,
+            'taxa_name' => 20,
             'parent_id' => 27
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Primatomorpha',
-            'taxonomic_rank' => 20,
+            'taxa_name' => 21,
             'parent_id' => 28
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Primates',
-            'taxonomic_rank' => 21,
+            'taxa_name' => 22,
             'parent_id' => 29
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Simiiformes',
-            'taxonomic_rank' => 22,
+            'taxa_name' => 23,
             'parent_id' => 30
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Catarrhini',
-            'taxonomic_rank' => 23,
+            'taxa_name' => 24,
             'parent_id' => 31
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Hominoidea',
-            'taxonomic_rank' => 24,
+            'taxa_name' => 25,
             'parent_id' => 32
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Hominidae',
-            'taxonomic_rank' => 25,
+            'taxa_name' => 26,
             'parent_id' => 33
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Homininae',
-            'taxonomic_rank' => 26,
+            'taxa_name' => 27,
             'parent_id' => 34
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Hominini',
-            'taxonomic_rank' => 27,
+            'taxa_name' => 28,
             'parent_id' => 35
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Hominina',
-            'taxonomic_rank' => 28,
+            'taxa_name' => 29,
             'parent_id' => 36
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'Homo',
-            'taxonomic_rank' => 29,
+            'taxa_name' => 30,
             'parent_id' => 37
         ]);
 
-        LinksTable::create([
+        Taxon::create([
             'name' => 'H. Sapien',
-            'taxonomic_rank' => 30,
+            'taxa_name' => 31,
             'parent_id' => 38
         ]);
     }

@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2d54a4e-1feb-4f66-beae-863151767446" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/classification/LinksTable.php" afterPath="$PROJECT_DIR$/app/models/classification/LinksTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scss/familytree.css" afterPath="$PROJECT_DIR$/public/scss/familytree.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scss/familytree.scss" afterPath="$PROJECT_DIR$/public/scss/familytree.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/master.blade.php" afterPath="$PROJECT_DIR$/app/views/master.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/seeds/TaxonomiesSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/classification/Taxonomy.php" />
+      <change type="MOVED" beforePath="C:\Users\User\Desktop\TreeOfLife\treeoflife\app\models\Submissions.php" afterPath="$PROJECT_DIR$/app/models/Submission.php" />
+      <change type="MOVED" beforePath="C:\Users\User\Desktop\TreeOfLife\treeoflife\app\models\classification\LinksTable.php" afterPath="$PROJECT_DIR$/app/models/classification/Taxon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/TestSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/TestSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/UsersTableSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/UsersTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/classification/class.blade.php" afterPath="$PROJECT_DIR$/app/views/classification/class.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascript/siteFunctions.js" afterPath="$PROJECT_DIR$/public/javascript/siteFunctions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="treeoflife.iws" />
@@ -33,22 +36,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TestSeeder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/database/seeds/TestSeeder.php">
+      <file leaf-file-name="class.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/classification/class.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.269231" vertical-offset="3224" max-vertical-offset="3757">
-              <caret line="217" column="11" selection-start-line="217" selection-start-column="11" selection-end-line="217" selection-end-column="11" />
+            <state vertical-scroll-proportion="-0.9444444" vertical-offset="0" max-vertical-offset="612">
+              <caret line="3" column="22" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="master.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/master.blade.php">
+      <file leaf-file-name="Taxon.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/classification/Taxon.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.730769" vertical-offset="113" max-vertical-offset="1462">
-              <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="72" />
-              <folding />
+            <state vertical-scroll-proportion="0.031894933" vertical-offset="1207" max-vertical-offset="2040">
+              <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
+              <folding>
+                <marker date="1414871526999" expanded="true" signature="1006:1406" placeholder="..." />
+                <marker date="1414871526999" expanded="true" signature="1109:1378" placeholder="..." />
+                <marker date="1414871526999" expanded="true" signature="1685:2085" placeholder="..." />
+                <marker date="1414871526999" expanded="true" signature="1788:2057" placeholder="..." />
+                <marker date="1414871526999" expanded="true" signature="3037:3418" placeholder="..." />
+                <marker date="1414871526999" expanded="true" signature="3093:3418" placeholder="..." />
+                <marker date="1414871526999" expanded="true" signature="3901:4262" placeholder="..." />
+                <marker date="1414871526999" expanded="true" signature="3953:4262" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,51 +68,8 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.384615" vertical-offset="196" max-vertical-offset="2669">
-              <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LinksTable.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/classification/LinksTable.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21538462" vertical-offset="160" max-vertical-offset="1751">
-              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-              <folding>
-                <marker date="1414772208094" expanded="true" signature="870:1046" placeholder="..." />
-                <marker date="1414772208094" expanded="true" signature="1460:1636" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="siteFunctions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascript/siteFunctions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="746" max-vertical-offset="1377">
-              <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="familytree.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/scss/familytree.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.192308" vertical-offset="2187" max-vertical-offset="2788">
-              <caret line="158" column="1" selection-start-line="158" selection-start-column="1" selection-end-line="158" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/classification/class.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="612">
-              <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+            <state vertical-scroll-proportion="-8.807693" vertical-offset="264" max-vertical-offset="2737">
+              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -124,14 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/Subtribe.php" />
-        <option value="$PROJECT_DIR$/app/models/Superclass.php" />
-        <option value="$PROJECT_DIR$/app/models/Superfamily.php" />
-        <option value="$PROJECT_DIR$/app/models/Superlegion.php" />
-        <option value="$PROJECT_DIR$/app/models/Superphylum.php" />
-        <option value="$PROJECT_DIR$/app/models/Tribe.php" />
-        <option value="$PROJECT_DIR$/app/models/Superorder.php" />
-        <option value="$PROJECT_DIR$/app/models/Legion.php" />
         <option value="$PROJECT_DIR$/app/models/Magnorder.php" />
         <option value="$PROJECT_DIR$/app/models/Mirorder.php" />
         <option value="$PROJECT_DIR$/app/models/Order.php" />
@@ -161,20 +122,28 @@
         <option value="$PROJECT_DIR$/public/css/custom_bootstrap.css" />
         <option value="$PROJECT_DIR$/app/models/classification/Domain.php" />
         <option value="$PROJECT_DIR$/app/models/classification/links_table.php" />
-        <option value="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/public/scss/test.scss" />
         <option value="$PROJECT_DIR$/app/models/classification/TestDomain.php" />
         <option value="$PROJECT_DIR$/app/models/classification/TestKingdom.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_10_29_102017_test_domain_links_table.php" />
-        <option value="$PROJECT_DIR$/app/database/seeds/TestSeeder.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/config/app.php" />
-        <option value="$PROJECT_DIR$/app/views/classification/class.blade.php" />
         <option value="$PROJECT_DIR$/app/views/master.blade.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/public/scss/familytree.scss" />
-        <option value="$PROJECT_DIR$/public/javascript/siteFunctions.js" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_11_01_155252_taxonomy_table_and_updates.php" />
         <option value="$PROJECT_DIR$/app/models/classification/LinksTable.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/UsersTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/models/classification/Taxonomy.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/app/storage/logs/laravel.log" />
+        <option value="$PROJECT_DIR$/public/javascript/siteFunctions.js" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_11_01_160838_create_taxonomy_table_updates.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/TaxonomiesSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_11_01_155912_create_links_table.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/TestSeeder.php" />
+        <option value="$PROJECT_DIR$/app/views/classification/class.blade.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/app/models/classification/Taxon.php" />
       </list>
     </option>
   </component>
@@ -239,6 +208,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -357,7 +327,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -375,7 +345,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -385,7 +355,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -459,15 +428,15 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="a90d03c3-125e-4484-986c-d48d8b75e37d" server_name="TreeOfLife">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="a90d03c3-125e-4484-986c-d48d8b75e37d" server_name="TreeOfLife">
       <method />
     </configuration>
     <configuration default="false" name="familytree.scss" type="JavascriptDebugType" factoryName="JavaScript Debug" nameIsGenerated="true" uri="http://localhost:8000/public/scss/familytree.scss">
@@ -540,31 +509,31 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26235095" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17019667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25113463" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27914613" sideWeight="0.1068814" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27914613" sideWeight="0.8931186" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26235095" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -575,7 +544,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17019667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25113463" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27914613" sideWeight="0.8931186" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -614,6 +583,71 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/database/seeds/TestSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3224" max-vertical-offset="3757">
+          <caret line="217" column="11" selection-start-line="217" selection-start-column="11" selection-end-line="217" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="1394">
+          <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="196" max-vertical-offset="2669">
+          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/classification/Taxon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2465">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1414871526999" expanded="true" signature="1006:1406" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="1109:1378" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="1685:2085" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="1788:2057" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="3037:3418" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="3093:3418" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="3901:4262" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="3953:4262" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascript/siteFunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="746" max-vertical-offset="1377">
+          <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scss/familytree.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2187" max-vertical-offset="2788">
+          <caret line="158" column="1" selection-start-line="158" selection-start-column="1" selection-end-line="158" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/classification/class.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="646">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/TestSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3621" max-vertical-offset="3757">
           <caret line="217" column="11" selection-start-line="217" selection-start-column="11" selection-end-line="217" selection-end-column="11" />
           <folding />
@@ -628,13 +662,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/classification/LinksTable.php">
+    <entry file="file://$PROJECT_DIR$/app/models/classification/Taxon.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="1734">
           <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
           <folding>
-            <marker date="1414772208094" expanded="true" signature="870:1046" placeholder="..." />
-            <marker date="1414772208094" expanded="true" signature="1460:1636" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="1006:1406" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="1109:1378" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="1685:2085" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="1788:2057" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="3037:3418" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="3093:3418" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="3901:4262" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="3953:4262" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -685,16 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/storage/logs/laravel.log">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="47787">
-          <caret line="0" column="240" selection-start-line="0" selection-start-column="240" selection-end-line="0" selection-end-column="240" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/emails/auth/reminder.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="340">
@@ -716,25 +746,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_10_17_153239_create_users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3846154" vertical-offset="185" max-vertical-offset="850">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.478424" vertical-offset="0" max-vertical-offset="533">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.9074073" vertical-offset="2857" max-vertical-offset="3400">
           <caret line="190" column="64" selection-start-line="190" selection-start-column="64" selection-end-line="190" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -742,7 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.307693" vertical-offset="266" max-vertical-offset="799">
           <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -754,61 +768,154 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/seeds/TestSeeder.php">
+    <entry file="file://$PROJECT_DIR$/public/scss/familytree.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.269231" vertical-offset="3224" max-vertical-offset="3757">
-          <caret line="217" column="11" selection-start-line="217" selection-start-column="11" selection-end-line="217" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.93621016" vertical-offset="2187" max-vertical-offset="2788">
+          <caret line="158" column="1" selection-start-line="158" selection-start-column="1" selection-end-line="158" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/master.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.730769" vertical-offset="113" max-vertical-offset="1462">
+        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="1394">
           <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/classification/class.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/models/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="612">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+        <state vertical-scroll-proportion="-19.192308" vertical-offset="215" max-vertical-offset="884">
+          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/scss/familytree.scss">
+    <entry file="file://$PROJECT_DIR$/app/models/Submission.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.192308" vertical-offset="2187" max-vertical-offset="2788">
-          <caret line="158" column="1" selection-start-line="158" selection-start-column="1" selection-end-line="158" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="536">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_10_17_153239_create_users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.230769" vertical-offset="177" max-vertical-offset="850">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="31" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/storage/logs/laravel.log">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.4666667" vertical-offset="140630" max-vertical-offset="266288">
+          <caret line="8282" column="12" selection-start-line="8282" selection-start-column="12" selection-end-line="8282" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascript/siteFunctions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="746" max-vertical-offset="1377">
-          <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="841" max-vertical-offset="1377">
+          <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/classification/Taxonomy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="340">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/UsersTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.730769" vertical-offset="8" max-vertical-offset="544">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="442">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_11_01_155912_create_links_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.5384617" vertical-offset="103" max-vertical-offset="748">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_11_01_160838_create_taxonomy_table_updates.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.296296" vertical-offset="130" max-vertical-offset="765">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/TestSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.073878" vertical-offset="3230" max-vertical-offset="3740">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/TaxonomiesSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.044854883" vertical-offset="0" max-vertical-offset="952">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/classification/class.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.9444444" vertical-offset="0" max-vertical-offset="612">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.384615" vertical-offset="196" max-vertical-offset="2669">
-          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+        <state vertical-scroll-proportion="-8.807693" vertical-offset="264" max-vertical-offset="2737">
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/classification/LinksTable.php">
+    <entry file="file://$PROJECT_DIR$/app/models/classification/Taxon.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21538462" vertical-offset="160" max-vertical-offset="1751">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.031894933" vertical-offset="1207" max-vertical-offset="2040">
+          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
           <folding>
-            <marker date="1414772208094" expanded="true" signature="870:1046" placeholder="..." />
-            <marker date="1414772208094" expanded="true" signature="1460:1636" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="1006:1406" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="1109:1378" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="1685:2085" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="1788:2057" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="3037:3418" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="3093:3418" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="3901:4262" placeholder="..." />
+            <marker date="1414871526999" expanded="true" signature="3953:4262" placeholder="..." />
           </folding>
         </state>
       </provider>

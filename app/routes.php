@@ -19,17 +19,21 @@ Route::get('about', function(){
 });
 
  Route::get('tree', function(){
-     $linksTable = new LinksTable;
-     $items = LinksTable::where('taxonomic_rank', '=', 0 )->get();
+     $taxa = new Taxon;
+     $items = Taxon::where('taxa.taxa_name', '=', 1 )->join('taxonomies', function($join){
+         $join->on('taxa.taxa_name', '=', 'taxonomies.id');
+        })
+         ->get();
+
      return View::make('classification.class')
          ->with("classification", $items)
-         ->with('linksTable', $linksTable);
+         ->with("taxa", $taxa);
  });
 
- Route::get('search', function(){
+ Route::get('searchbar', function(){
     $data = Input::get('input');
     if(Request::ajax()){
-        $result = LinksTable::where('name', 'LIKE', "%".$data."%")->get();
+        $result = Taxon::where('name', 'LIKE', "%".$data."%")->get();
             return Response::json($result);
     };
  });

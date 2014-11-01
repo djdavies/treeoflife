@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder {
 		
 				[
 					'username' => 'StyleASD', 
-					'password' => Hash::make('Speed runs live1'),
+					'password' => Hash::make('password'),
 					'first_name' => 'Aled',
 					'last_name' => 'Davies',
 					'is_user_level' => 1

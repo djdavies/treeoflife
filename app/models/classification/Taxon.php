@@ -4,8 +4,12 @@
      * Date: 29/10/2014
      * Time: 09:53
      */
-    class LinksTable extends Eloquent{
+    class Taxon extends Eloquent{
         public $timestamps = false;
+
+        public function taxonomy(){
+            $this->hasMany('Taxonomy');
+        }
 
         public function getChildren($parentId = 0){
             $children = $this::where('parent_id', $parentId )->get()->toArray();
@@ -52,12 +56,13 @@
         }
 
         public function showChildren($parent_id){
+            $class = Taxonomy::all();
             $children = $this::where('parent_id', $parent_id )->get()->toArray();
             if(count($children) == 1){
                 echo "<div class='branch " . $children[0]['taxonomic_rank'] . " hidden'>";
                 foreach ($children as $key => $value) {
                     echo "<div class='entry sole'>
-                     <span class='label'>
+                     <span class='label' data-classification='$value->level' data-id='$value->id'>
                         <i class='glyphicon glyphicon-chevron-left pull-left expand-tree'></i>
                             ".$value['name'] ."
                         <i class='glyphicon glyphicon-chevron-right pull-right expand-tree'></i>
@@ -69,7 +74,7 @@
                 echo "<div class='branch " . $children[0]['taxonomic_rank'] . " hidden'>";
                 foreach ($children as $key => $value) {
                     echo "<div class='entry'>
-                     <span class='label'>
+                     <span class='label' data-classification='$value->level' data-id='$value->id'>
                         <i class='glyphicon glyphicon-chevron-left pull-left expand-tree'></i>
                             ".$value['name'] ."
                         <i class='glyphicon glyphicon-chevron-right pull-right expand-tree'></i>
