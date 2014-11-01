@@ -69,10 +69,6 @@
 				</div>
  			@endif
 			 @yield('content')
-
-			<nav class="navbar navbar-bottom footer">
-				@yield('footer')
-			</nav>
 		</div>	
 	</body>
 	{{ HTML::script('javascript/jquery-2.1.1.js') }}

@@ -10,7 +10,7 @@
 
 		@section('content')
 			<div class="row">
-                <div class="col-md-2 level">
+                <div class="col-md-3 level">
                      <span> Root </span>
                 </div>
             </div>
@@ -20,8 +20,10 @@
                     @foreach($classification as $content)
                         <div id="wrapper">
                             <div class="root">
-                                <span class="label">{{ $content->name }} <span class="pull-right expand-tree">&rArr;</span></span></p>
-                                {{ $linksTable->getTree($content->id ); }}
+                                <span class="label">{{ $content->name }}
+                                    <i class="glyphicon glyphicon-chevron-right pull-right expand-tree"></i>
+                                </span>
+                                {{ $linksTable->showChildren($content->id ); }}
                             </div>
                         </div>
                     @endforeach

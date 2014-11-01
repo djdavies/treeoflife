@@ -12,34 +12,76 @@
             return $children;
         }
 
-        public function getTree($parent_id){
-            $myArray = $this->getChildren($parent_id);
-            for($i = 0; $i<3; $i++){
-                if(count($myArray) == 0){
+        public function getTree($parent_id, $increment = 0){
+            $myArray = $this->getChildren($parent_id, $increment);
+            if($increment == 30) {
+                return;
+            }else {
+                if (count($myArray) == 0) {
                     echo '</div>';
-                }else if(count($myArray) == 1){
-                    echo "<div class='branch ".$myArray[0]['taxonomic_rank']." hidden'>";
+                } else if (count($myArray) == 1) {
+                    echo "<div class='branch " . $myArray[0]['taxonomic_rank'] . " hidden'>";
                     foreach ($myArray as $key => $value) {
                         if ($value['parent_id'] != $parent_id) continue;
                         echo "<div class='entry sole'>
-                             <span class='label'><span class='pull-left contract-tree'>&lArr;</span>".$value['name']."<span class='pull-right expand-tree'>&rArr;</span></span>";
-                        $this->getTree($value['id']);
+                                 <span class='label'>
+                                    <i class='glyphicon glyphicon-chevron-left pull-left expand-tree'></i>
+                                        ".$value['name'] ."
+                                    <i class='glyphicon glyphicon-chevron-right pull-right expand-tree'></i>
+                                 </span>";
+                        $increment++;
+                        $this->getTree($value['id'], $increment);
                     }
                     echo '</div></div>';
-                }else{
-                    echo "<div class='branch ".$myArray[0]['taxonomic_rank']." hidden'>";
+                } else {
+                    echo "<div class='branch " . $myArray[0]['taxonomic_rank'] . " hidden'>";
                     foreach ($myArray as $key => $value) {
                         if ($value['parent_id'] != $parent_id) continue;
                         echo "<div class='entry'>
-                             <span class='label'><span class='pull-left contract-tree'>&lArr;</span>".$value['name']."<span class='pull-right expand-tree'>&rArr;</span></span>";
-                        $this->getTree($value['id']);
+                             <span class='label'>
+                                <i class='glyphicon glyphicon-chevron-left pull-left expand-tree'></i>
+                                    ".$value['name'] ."
+                                <i class='glyphicon glyphicon-chevron-right pull-right expand-tree'></i>
+                             </span>";
+                        $increment++;
+                        $this->getTree($value['id'], $increment);
                     }
                     echo '</div></div>';
                 }
             }
-
         }
-        
+
+        public function showChildren($parent_id){
+            $children = $this::where('parent_id', $parent_id )->get()->toArray();
+            if(count($children) == 1){
+                echo "<div class='branch " . $children[0]['taxonomic_rank'] . " hidden'>";
+                foreach ($children as $key => $value) {
+                    echo "<div class='entry sole'>
+                     <span class='label'>
+                        <i class='glyphicon glyphicon-chevron-left pull-left expand-tree'></i>
+                            ".$value['name'] ."
+                        <i class='glyphicon glyphicon-chevron-right pull-right expand-tree'></i>
+                     </span>
+                     </div>";
+                }
+                echo '</div>';
+            }else if(count($children)){
+                echo "<div class='branch " . $children[0]['taxonomic_rank'] . " hidden'>";
+                foreach ($children as $key => $value) {
+                    echo "<div class='entry'>
+                     <span class='label'>
+                        <i class='glyphicon glyphicon-chevron-left pull-left expand-tree'></i>
+                            ".$value['name'] ."
+                        <i class='glyphicon glyphicon-chevron-right pull-right expand-tree'></i>
+                     </span>
+                     </div>";
+                }
+                echo '</div>';
+            }else{
+                
+            }
+        }
+
 
         public function getParent(){
         }

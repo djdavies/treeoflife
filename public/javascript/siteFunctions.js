@@ -22,7 +22,7 @@ $(document).ready(function(){
 
     });
 
-    $('span.expand-tree').click(function(event){
+    $('i.expand-tree').click(function(event){
         var tree = $(event.target).parent('div').get(0);
         $("div.branch.hidden").removeClass('hidden');
     });
