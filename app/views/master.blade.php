@@ -16,15 +16,15 @@
 		        </div>
 
 		        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		            <form class="navbar-form navbar-left" role="search">
+		            <form action="/search" class="navbar-form navbar-left" role="search">
 		            <div class="form-group dropdown">
-		                <input type="text" class="form-control searchbar" placeholder="Search" data-toggle="dropdown">
+		                <input type="text" class="form-control searchbar" placeholder="Search" name="request" data-toggle="dropdown">
 		                <ul class="dropdown-menu results hidden" role="menu" aria-labelledby="dLabel"></ul>
 		            </div>
 		          </form>
 		          
 						<ul class="nav navbar-nav navbar-left">
-							<li><a href="#">Explore</a></li>
+							<li><a href="search">Explore</a></li>
 							<li><a href="#">Features</a></li>
 							<li><a href="#">Enterprise</a></li>
 							<li><a href="#">Blogs</a></li>
@@ -69,7 +69,8 @@
 				</div>
  			@endif
 			 @yield('content')
-		</div>	
+		</div>
+
 	</body>
 	{{ HTML::script('javascript/jquery-2.1.1.js') }}
 	{{ HTML::script('javascript/bootstrap.js') }}

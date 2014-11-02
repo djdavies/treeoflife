@@ -14,29 +14,14 @@ Route::get('/', function(){
 	return Redirect::route('tree');
 });
 
-Route::get('about', function(){
-	return View::make('about')->with('number_of_species', 10);
-});
+ //controller for controlling the tree view of the website.
+ Route::get('tree', 'TreeController@showTree');
+ Route::get('tree/child', 'TreeController@getChildren');
 
- Route::get('tree', function(){
-     $taxa = new Taxon;
-     $items = Taxon::where('taxa.taxa_name', '=', 1 )->join('taxonomies', function($join){
-         $join->on('taxa.taxa_name', '=', 'taxonomies.id');
-        })
-         ->get();
 
-     return View::make('classification.class')
-         ->with("classification", $items)
-         ->with("taxa", $taxa);
- });
 
- Route::get('searchbar', function(){
-    $data = Input::get('input');
-    if(Request::ajax()){
-        $result = Taxon::where('name', 'LIKE', "%".$data."%")->get();
-            return Response::json($result);
-    };
- });
+ Route::get('searchbar', 'SearchController@searchbar');
+ Route::get('search', 'SearchController@search');
 
 
  // old code will need fixing

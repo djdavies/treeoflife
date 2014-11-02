@@ -18,10 +18,11 @@
                     @foreach($classification as $content)
                         <div id="wrapper">
                             <div class="root">
-                                <span class="label" data-classification="root" data-id="$content->id">{{ $content->name }}
-                                    <i class="glyphicon glyphicon-chevron-right pull-right expand-tree"></i>
+                                <span class="label">{{ $content->name }}
+                                    <i class="glyphicon glyphicon-chevron-right pull-right expand-tree"
+                                    data-classification="{{ $content->taxa_name }}"
+                                    data-id="{{ $content->id }}"></i>
                                 </span>
-                                {{ $taxa->showChildren($content->id ); }}
                             </div>
                         </div>
                     @endforeach

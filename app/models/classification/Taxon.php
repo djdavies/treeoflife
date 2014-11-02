@@ -8,54 +8,15 @@
         public $timestamps = false;
         public $table = 'taxa';
 
-        public function taxonomy(){
+        public function taxonomies(){
             $this->hasMany('Taxonomy');
         }
 
+        //The purpose of this is to get all the children of a given parent node
         public function getChildren($parentId = 0){
-            $children = $this::where('taxa.parent_id', $parentId )
-                ->join('taxonomies', function($join)
-                {
-                    $join->on('taxa.taxa_name', '=', 'taxonomies.id');
-                })
-                ->get()->toArray();
+            $children = $this::where('taxa.parent_id', $parentId )->get()->toArray();
             return $children;
         }
-
-
-
-        public function showChildren($parent_id){
-            $class = Taxonomy::all();
-            $children = $this->getChildren($parent_id);
-            if(count($children) == 1){
-                echo "<div class='branch " . $children[0]['taxa_name'] . " hidden'>";
-                foreach ($children as $key => $value) {
-                    echo "<div class='entry sole'>
-                     <span class='label' data-classification='$value[taxa_name]' data-id='$value[id]'>
-                        <i class='glyphicon glyphicon-chevron-left pull-left expand-tree'></i>
-                            ".$value['name'] ."
-                        <i class='glyphicon glyphicon-chevron-right pull-right expand-tree'></i>
-                     </span>
-                     </div>";
-                }
-                echo '</div>';
-            }else if(count($children)){
-                echo "<div class='branch " . $children[0]['taxa_name'] . " hidden'>";
-                foreach ($children as $key => $value) {
-                    echo "<div class='entry'>
-                     <span class='label' data-classification='$value[taxa_name]' data-id='$value[id]'>
-                        <i class='glyphicon glyphicon-chevron-left pull-left expand-tree'></i>
-                            ".$value['name'] ."
-                        <i class='glyphicon glyphicon-chevron-right pull-right expand-tree'></i>
-                     </span>
-                     </div>";
-                }
-                echo '</div>';
-            }else{
-                
-            }
-        }
-
 
         public function getParent(){
         }
@@ -70,7 +31,7 @@
             return 'links_tables';
         }
 
-        
+
 
 //        public function getTree($parent_id, $increment = 0){
 //            $myArray = $this->getChildren($parent_id, $increment);

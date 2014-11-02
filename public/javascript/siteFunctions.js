@@ -6,7 +6,6 @@ $(document).ready(function(){
 		$(this).slideToggle(1);
 		$(".input-hide").slideToggle(250);
 	});
-
 	
 	$("form.login").keypress(function (e) {
 		if (e.which == 13) {
@@ -19,20 +18,37 @@ $(document).ready(function(){
 		if(!checkInputFields(formInputs)){
         	return false;
         }
-
     });
 
-    $('i.expand-tree').click(function(event){
-        var tree = $(event.target).parent('div').get(0);
-        $("div.branch.hidden").removeClass('hidden');
+    $('div.root').on('click', 'i.expand-tree', function(event){
+        if($(event.target).parent().siblings('div.hidden').length >0){
+            $(event.target).removeClass('glyphicon-chevron-right expand-tree')
+                .addClass('glyphicon-chevron-left contract-tree');
+            $(event.target).parent().siblings('div.hidden').removeClass('hidden');
+        }else{
+            var parent_id = $(event.target).data("id");
+            $.ajax({
+                type: "get",
+                url: "tree/child",
+                cache: false,
+                data: 'parent_id=' + parent_id,
+                success: function (data) {
+                    if(data){
+                        $(event.target).removeClass('glyphicon-chevron-right expand-tree')
+                            .addClass('glyphicon-chevron-left contract-tree');
+                        $(event.target).closest("div").append(data);
+                    }
+                }
+            });
+        }
     });
 
-	/**
-	 * [checkInputFields this function is used to iterate through methods so that it can check whether fields
-	 * have been filled in. If a required field is empty it will ]
-	 * @param  {[array]} inputs [an array inputs received from the form we wish to validate]
-	 * @return {[boolean]}  [returns true or false depending on its success]
-	 */
+    $('div.root').on('click', 'i.contract-tree', function(event){
+        $(event.target).parent().siblings('div').addClass('hidden');
+        $(event.target).removeClass('glyphicon-chevron-left contract-tree')
+            .addClass('glyphicon-chevron-right expand-tree');
+    });
+
 	function checkInputFields(inputs){
 		var isValid = true;
 		for(var i = 0; i < inputs.length; i++){
@@ -58,12 +74,12 @@ $(document).ready(function(){
 
         $.ajax({
             type: "get",
-            url: "search",
+            url: "searchbar",
             data: 'input=' + input,
             success: function (data) {
                 if(data.length){
                     for (var i = 0; i < data.length; i++) {
-                        $("<li>" + data[i].taxonomic_rank + ": " + data[i].name + "</li>").appendTo("ul.dropdown-menu.results");
+                        $("<li>" + data[i].taxa_name + ": " + data[i].name + "</li>").appendTo("ul.dropdown-menu.results");
                     }
                 }else{
                     $("<li>No Results available</li>" ).appendTo("ul.dropdown-menu.results");
