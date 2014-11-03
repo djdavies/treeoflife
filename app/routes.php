@@ -10,31 +10,32 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-Route::get('/', function(){
-	return Redirect::route('tree');
-});
+    Route::get('/', function(){
+        return Redirect::route('tree');
+    });
 
-//controller for controlling the tree view of the website.
-Route::get('tree', 'TreeController@showTree');
-Route::get('tree/child', 'TreeController@getChildren');
-
-
-// controler for searching the database
-Route::get('searchbar', 'SearchController@searchbar');
-Route::get('search', 'SearchController@search');
-Route::post('search', 'SearchController@search');
+    //controller for controlling the tree view of the website.
+    Route::get('tree', 'TreeController@showTree');
+    Route::get('tree/child', 'TreeController@getChildren');
 
 
- // Managing the description view and editing documents
-Route::get('d/{classification}', 'DescriptionController@getDescription' );
+    // controler for searching the database
+    Route::get('searchbar', 'SearchController@searchbar');
+    Route::get('search', 'SearchController@search');
+    Route::post('search', 'SearchController@search');
 
+    Route::get('searchbar', 'SearchController@searchbar');
+    Route::get('search', 'SearchController@search');
 
-//Authorisation these cannot be done unless the user is logged in
-Route::group(array('before'=>'auth'), function(){
-	Route::get('create/{classification}', 'DescritionController@createTaxon');
-	Route::get('edit/{classification}', 'DescritionController@editDescription');
-    Route::get('delete/{classification}', 'DescritionController@deleteDescription');
-});
+    // Managing the description view and editing documents
+    Route::get('d/{classification}', 'DescriptionController@getDescription' );
+
+    //Authorisation these cannot be done unless the user is logged in
+    Route::group(array('before'=>'auth'), function(){
+        Route::get('create/{classification}', 'DescritionController@createTaxon');
+        Route::get('edit/{classification}', 'DescritionController@editDescription');
+        Route::get('delete/{classification}', 'DescritionController@deleteDescription');
+    });
 
 	Route::post('d/{classification}', 'DescriptionController@postNew');
 

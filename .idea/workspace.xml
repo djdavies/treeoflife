@@ -2,9 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2d54a4e-1feb-4f66-beae-863151767446" name="Default" comment="">
+<<<<<<< Updated upstream
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/DescriptionController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/classification/description.blade.php" afterPath="$PROJECT_DIR$/app/views/classification/description.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+=======
+<<<<<<< HEAD
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/SearchController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/TreeController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/search.blade.php" />
+      <change type="DELETED" beforePath="C:\Users\User\Desktop\TreeOfLife\treeoflife\app\controllers\SpeciesController.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/classification/Taxon.php" afterPath="$PROJECT_DIR$/app/models/classification/Taxon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/classification/class.blade.php" afterPath="$PROJECT_DIR$/app/views/classification/class.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/master.blade.php" afterPath="$PROJECT_DIR$/app/views/master.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascript/siteFunctions.js" afterPath="$PROJECT_DIR$/public/javascript/siteFunctions.js" />
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/DescriptionController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/classification/description.blade.php" afterPath="$PROJECT_DIR$/app/views/classification/description.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+>>>>>>> 09b41e5... Started Edit page
+>>>>>>> Stashed changes
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="treeoflife.iws" />
@@ -33,51 +51,132 @@
       <file leaf-file-name="description.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/classification/description.blade.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state vertical-scroll-proportion="-6.6923075" vertical-offset="13" max-vertical-offset="714">
               <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+=======
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="221">
+              <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+=======
+            <state vertical-scroll-proportion="-6.6923075" vertical-offset="13" max-vertical-offset="714">
+              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+>>>>>>> 09b41e5... Started Edit page
+>>>>>>> Stashed changes
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="class.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/classification/class.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="510">
               <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="66" />
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="master.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/master.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.807693" vertical-offset="85" max-vertical-offset="1411">
+              <caret line="20" column="108" selection-start-line="20" selection-start-column="101" selection-end-line="20" selection-end-column="108" />
+=======
+      <file leaf-file-name="class.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/classification/class.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="510">
+              <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="66" />
+>>>>>>> 09b41e5... Started Edit page
+>>>>>>> Stashed changes
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.62664163" vertical-offset="312" max-vertical-offset="1564">
               <caret line="38" column="69" selection-start-line="38" selection-start-column="69" selection-end-line="38" selection-end-column="69" />
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.961538" vertical-offset="158" max-vertical-offset="2482">
+              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+=======
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.62664163" vertical-offset="312" max-vertical-offset="1564">
+              <caret line="38" column="69" selection-start-line="38" selection-start-column="69" selection-end-line="38" selection-end-column="69" />
+>>>>>>> 09b41e5... Started Edit page
+>>>>>>> Stashed changes
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="DescriptionController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/DescriptionController.php">
           <provider selected="true" editor-type-id="text-editor">
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="SearchController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/SearchController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6378987" vertical-offset="0" max-vertical-offset="544">
+              <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+              <folding />
+=======
+      <file leaf-file-name="DescriptionController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/DescriptionController.php">
+          <provider selected="true" editor-type-id="text-editor">
+>>>>>>> Stashed changes
             <state vertical-scroll-proportion="-15.269231" vertical-offset="300" max-vertical-offset="833">
               <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
               <folding>
                 <element signature="e#6#86#0#PHP" expanded="true" />
               </folding>
+<<<<<<< Updated upstream
+=======
+>>>>>>> 09b41e5... Started Edit page
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
+      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/classification/edit.blade.php">
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="TreeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/TreeController.php">
+>>>>>>> Stashed changes
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.307692" vertical-offset="375" max-vertical-offset="1802">
+              <caret line="47" column="51" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
+              <folding>
+<<<<<<< Updated upstream
+=======
+                <element signature="e#6#86#0#PHP" expanded="true" />
+                <marker date="1414944366895" expanded="true" signature="864:1169" placeholder="..." />
+                <marker date="1414944366895" expanded="true" signature="906:1141" placeholder="..." />
+                <marker date="1414944366895" expanded="true" signature="1466:1772" placeholder="..." />
+                <marker date="1414944366895" expanded="true" signature="1508:1744" placeholder="..." />
+=======
       <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/classification/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-16.307692" vertical-offset="375" max-vertical-offset="1802">
               <caret line="47" column="51" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
               <folding>
+>>>>>>> Stashed changes
                 <marker date="1414540165027" expanded="true" signature="387:529" placeholder="..." />
                 <marker date="1414540165027" expanded="true" signature="410:523" placeholder="..." />
                 <marker date="1414540165027" expanded="true" signature="977:1120" placeholder="..." />
@@ -85,6 +184,10 @@
                 <marker date="1414540165027" expanded="true" signature="2550:2689" placeholder="..." />
                 <marker date="1414540165027" expanded="true" signature="3125:3201" placeholder="..." />
                 <marker date="1414540165027" expanded="true" signature="3370:3448" placeholder="..." />
+<<<<<<< Updated upstream
+=======
+>>>>>>> 09b41e5... Started Edit page
+>>>>>>> Stashed changes
               </folding>
             </state>
           </provider>
@@ -108,6 +211,17 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/app/models/Parvorder.php" />
+        <option value="$PROJECT_DIR$/app/models/Phylum.php" />
+        <option value="$PROJECT_DIR$/app/models/Subclass.php" />
+        <option value="$PROJECT_DIR$/app/models/Subcohort.php" />
+        <option value="$PROJECT_DIR$/app/models/Subfamily.php" />
+=======
+>>>>>>> 09b41e5... Started Edit page
+>>>>>>> Stashed changes
         <option value="$PROJECT_DIR$/app/models/Subkingdom.php" />
         <option value="$PROJECT_DIR$/app/models/Classes.php" />
         <option value="$PROJECT_DIR$/app/models/Domain.php" />
@@ -148,6 +262,7 @@
         <option value="$PROJECT_DIR$/public/scss/familytree.scss" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/views/search.blade.php" />
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/app/database/migrations/2014_11_01_160838_create_taxonomy_table_updates.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_11_03_120835_update_taxa_table.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_11_01_155912_create_links_table.php" />
@@ -155,10 +270,27 @@
         <option value="$PROJECT_DIR$/app/views/classification/class.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/TreeController.php" />
         <option value="$PROJECT_DIR$/app/controllers/SearchController.php" />
+=======
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/app/controllers/TreeController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/SearchController.php" />
+=======
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_11_01_160838_create_taxonomy_table_updates.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_11_03_120835_update_taxa_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_11_01_155912_create_links_table.php" />
+        <option value="$PROJECT_DIR$/app/views/classification/single.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/classification/class.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/TreeController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/SearchController.php" />
+>>>>>>> Stashed changes
         <option value="$PROJECT_DIR$/app/controllers/DesciptionController.php" />
         <option value="$PROJECT_DIR$/app/views/classification/description.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/DescriptionController.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
+<<<<<<< Updated upstream
+=======
+>>>>>>> 09b41e5... Started Edit page
+>>>>>>> Stashed changes
       </list>
     </option>
   </component>
@@ -360,6 +492,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -382,6 +519,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< Updated upstream
+=======
+>>>>>>> 09b41e5... Started Edit page
+>>>>>>> Stashed changes
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -635,11 +776,24 @@
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="e#6#86#0#PHP" expanded="true" />
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+            <marker date="1414944366895" expanded="true" signature="864:1169" placeholder="..." />
+            <marker date="1414944366895" expanded="true" signature="906:1141" placeholder="..." />
+            <marker date="1414944366895" expanded="true" signature="1466:1772" placeholder="..." />
+            <marker date="1414944366895" expanded="true" signature="1508:1744" placeholder="..." />
+=======
+>>>>>>> Stashed changes
             <marker date="1415023069352" expanded="true" signature="-1:-1" placeholder="..." />
             <marker date="1415023069352" expanded="true" signature="-1:-1" placeholder="..." />
             <marker date="1415023069352" expanded="true" signature="-1:-1" placeholder="..." />
             <marker date="1415023069352" expanded="true" signature="-1:-1" placeholder="..." />
             <marker date="1415023069352" expanded="true" signature="-1:-1" placeholder="..." />
+<<<<<<< Updated upstream
+=======
+>>>>>>> 09b41e5... Started Edit page
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -789,9 +943,23 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2040">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
+=======
+    <entry file="file://$PROJECT_DIR$/public/scss/familytree.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.93621016" vertical-offset="2187" max-vertical-offset="2788">
+          <caret line="158" column="1" selection-start-line="158" selection-start-column="1" selection-end-line="158" selection-end-column="1" />
+          <folding />
+=======
+>>>>>>> 09b41e5... Started Edit page
+        </state>
+      </provider>
+    </entry>
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/app/models/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.192308" vertical-offset="215" max-vertical-offset="884">
@@ -932,14 +1100,12 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_11_01_155912_create_links_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.461538" vertical-offset="103" max-vertical-offset="765">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+=======
     <entry file="file://$PROJECT_DIR$/app/views/search.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.23077" vertical-offset="19" max-vertical-offset="748">
@@ -949,15 +1115,38 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
+>>>>>>> 09b41e5... Started Edit page
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06378987" vertical-offset="0" max-vertical-offset="533">
-          <caret line="2" column="45" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state vertical-scroll-proportion="-8.461538" vertical-offset="103" max-vertical-offset="765">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/TreeController.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
+        <state vertical-scroll-proportion="-18.23077" vertical-offset="19" max-vertical-offset="748">
+          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+=======
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="221">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+>>>>>>> Stashed changes
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
+        <state vertical-scroll-proportion="0.06378987" vertical-offset="0" max-vertical-offset="533">
+          <caret line="2" column="45" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="-9.807693" vertical-offset="85" max-vertical-offset="1411">
+          <caret line="20" column="108" selection-start-line="20" selection-start-column="101" selection-end-line="20" selection-end-column="108" />
+=======
         <state vertical-scroll-proportion="1.1903846" vertical-offset="78" max-vertical-offset="1003">
           <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
           <folding>
@@ -973,6 +1162,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/SearchController.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="748">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="47" />
+>>>>>>> Stashed changes
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/classification/class.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="510">
+          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="66" />
+>>>>>>> 09b41e5... Started Edit page
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/controllers/TreeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1903846" vertical-offset="78" max-vertical-offset="1003">
+          <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+            <marker date="1415023069352" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1415023069352" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1415023069352" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1415023069352" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1415023069352" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/app/views/classification/description.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.6923075" vertical-offset="13" max-vertical-offset="714">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding />
+>>>>>>> 09b41e5... Started Edit page
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/classification/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="748">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="47" />
           <folding />
@@ -1025,10 +1256,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.62664163" vertical-offset="312" max-vertical-offset="1564">
           <caret line="38" column="69" selection-start-line="38" selection-start-column="69" selection-end-line="38" selection-end-column="69" />
+=======
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.6378987" vertical-offset="0" max-vertical-offset="544">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>
     </entry>
+=======
+        <state vertical-scroll-proportion="-16.307692" vertical-offset="375" max-vertical-offset="1802">
+          <caret line="47" column="51" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
+          <folding>
+            <marker date="1414540165027" expanded="true" signature="387:529" placeholder="..." />
+            <marker date="1414540165027" expanded="true" signature="410:523" placeholder="..." />
+            <marker date="1414540165027" expanded="true" signature="977:1120" placeholder="..." />
+            <marker date="1414540165027" expanded="true" signature="2106:2237" placeholder="..." />
+            <marker date="1414540165027" expanded="true" signature="2550:2689" placeholder="..." />
+            <marker date="1414540165027" expanded="true" signature="3125:3201" placeholder="..." />
+            <marker date="1414540165027" expanded="true" signature="3370:3448" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/DescriptionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.269231" vertical-offset="300" max-vertical-offset="833">
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62664163" vertical-offset="312" max-vertical-offset="1564">
+          <caret line="38" column="69" selection-start-line="38" selection-start-column="69" selection-end-line="38" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 09b41e5... Started Edit page
   </component>
 </project>
 
