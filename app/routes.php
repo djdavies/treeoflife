@@ -14,83 +14,29 @@ Route::get('/', function(){
 	return Redirect::route('tree');
 });
 
- //controller for controlling the tree view of the website.
- Route::get('tree', 'TreeController@showTree');
- Route::get('tree/child', 'TreeController@getChildren');
+//controller for controlling the tree view of the website.
+Route::get('tree', 'TreeController@showTree');
+Route::get('tree/child', 'TreeController@getChildren');
 
 
-
- Route::get('searchbar', 'SearchController@searchbar');
- Route::get('search', 'SearchController@search');
- Route::post('search', 'SearchController@search');
-
-
- // old code will need fixing
-Route::get('d/{classification}', function($classification){
-	$taxa = new Taxon;
-	$items = $taxa::where('name', '=', $classification)->get();
-	return View::make('classification.description')
-		->with("item", $items)
-		->with('taxa', $taxa);
-});
+// controler for searching the database
+Route::get('searchbar', 'SearchController@searchbar');
+Route::get('search', 'SearchController@search');
+Route::post('search', 'SearchController@search');
 
 
-Route::get('tree/{classification}/{id}/children', function($classification, $id){
-	$class = $classification::find($id);
-	return View::make('classification.index')
-		->with("classification", $class);
-});
+ // Managing the description view and editing documents
+Route::get('d/{classification}', 'DescriptionController@getDescription' );
 
-Route::get('tree/{classification}/{id?}', [
-	'as' => 'tree',
-	function($classification, $id = null){
-		$model = new $classification;
-		$item = $id
-			? $model::find($id)
-			: $model::first();
-		
-		return View::make('classification.single')
-			->with('item', $item)
-			->with('self', $model);
-	}
-])->where('id', '[0-9]+');
 
 //Authorisation these cannot be done unless the user is logged in
 Route::group(array('before'=>'auth'), function(){
-	Route::get('tree/{classification}/create', function($classification) {
-		$class = new $classification;
-		return View::make('classification.edit')
-		->with('classification', $class)
-		->with('method', 'post');
-	});
+	Route::get('create/{classification}', 'DescritionController@createTaxon');
+	Route::get('edit/{classification}', 'DescritionController@editDescription');
+    Route::get('delete/{classification}', 'DescritionController@deleteDescription');
+});
 
-	Route::get('species/{species}/edit', function(species $species){
-		return View::make('classification.edit')
-			->with('species', $species)
-			->with('method', 'put');
-	});
-
-	Route::get('species/{species}/delete', function(species $species){
-		if(Auth::user()->canEdit($species)){
-			return View::make('classification.edit')
-				->with('species', $species)
-				->with('method', 'delete');
-		}else{
-			return Redirect::to('species/'.$species->id);
-		}
-	});
-
-	Route::post('species', function(){
-		$species = species::create(Input::all());
-		$submission->user_id = Auth::user()->id;
- 		if($submission->save()){
-			return Redirect::to('species/'.$species->id)
-				->with('message', 'Successfully inserted a Species!');
-		} else {
-			return Redirect::back()
-			->with('error', 'Could not create profile');
-		}
-	});
+	Route::post('d/{classification}', 'DescriptionController@postNew');
 
 	Route::put('species/{species}', function(species $species){
 		$species->update(Input::all());
@@ -119,7 +65,6 @@ Route::group(array('before'=>'auth'), function(){
 
 		$view->with('classes_options', $classes_options);
 	});
-});
 
 Route::get('login', function(){
 	return View::make('login');
