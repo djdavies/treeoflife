@@ -18,10 +18,22 @@ class SearchController extends BaseController {
     }
 
     public function search() {
+        $time_start = $this->microtime_float();
         $data = Input::get('request');
-        $result = Taxon::where('name', 'LIKE', "%" . $data . "%")->get();
+
+        $result = Taxon::whereRaw("MATCH(name, summary, description) AGAINST('+$data*' IN BOOLEAN MODE)")->paginate(10);
+
+        $time_end = $this->microtime_float();
+        $time = $time_end - $time_start;
         return View::make('search')
             ->with('request', $data)
-            ->with('result', $result);
+            ->with('result', $result)
+            ->with('time', $time);
+
+
     }
+    private function microtime_float(){
+    list($usec, $sec) = explode(" ", microtime());
+    return ((float)$usec + (float)$sec);
+}
 }

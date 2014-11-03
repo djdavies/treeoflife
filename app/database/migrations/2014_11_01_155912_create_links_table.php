@@ -13,6 +13,7 @@ class CreateLinksTable extends Migration {
 	public function up()
 	{
         Schema::create('taxa', function($table){
+            $table->engine ='MyISAM';
             $table->bigincrements('id');
             $table->string('name')->nulable();
             $table->string('scientific_name');

@@ -19,11 +19,7 @@ class CreateTaxonomyTableUpdates extends Migration {
 
         Schema::table('taxa', function($table){
             $table->dropColumn('level');
-            $table->integer('taxa_name')->unsigned();
-        });
-
-        Schema::table('taxa', function($table) {
-            $table->foreign('taxa_name')->references('id')->on('taxonomies')->onDelete('cascade');
+            $table->integer('taxa_name')->references('id')->on('taxonomies')->unsigned();
         });
     }
 

@@ -7,7 +7,6 @@ body {
   min-width: 1200px;
   margin: 0;
   padding: 50px;
-  color: #7ba73e;
   font: 16px Verdana, sans-serif;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -113,3 +112,25 @@ body {
 
 .dropdown-menu, .searchbar {
   min-width: 207px; }
+
+.inline-header {
+  display: inline-block;
+  vertical-align: baseline; }
+
+.search-results {
+  border-left: 1px solid rgba(149, 193, 87, 0.5);
+  border-right: 1px solid rgba(149, 193, 87, 0.5);
+  border-top: 1px solid rgba(149, 193, 87, 0.5);
+  border-bottom: 1px solid rgba(149, 193, 87, 0.5);
+  margin-bottom: 2px;
+  padding-left: 3%; }
+
+.search-results .col-md-11 {
+  padding-left: 1%;
+  border-bottom: 1px solid rgba(149, 193, 87, 0.5); }
+
+.search-results .col-md-11 h1 {
+  font-size: 16px; }
+
+.search-results h2, p {
+  font-size: 14px; }

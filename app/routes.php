@@ -22,15 +22,16 @@ Route::get('/', function(){
 
  Route::get('searchbar', 'SearchController@searchbar');
  Route::get('search', 'SearchController@search');
+ Route::post('search', 'SearchController@search');
 
 
  // old code will need fixing
 Route::get('d/{classification}', function($classification){
-	$classes = new $classification;
-	$items = $classes::all();
-	return View::make('classification.class')
-		->with("classification", $items)
-		->with('classes', $classes);
+	$taxa = new Taxon;
+	$items = $taxa::where('name', '=', $classification)->get();
+	return View::make('classification.description')
+		->with("item", $items)
+		->with('taxa', $taxa);
 });
 
 

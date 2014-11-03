@@ -28,7 +28,7 @@ class TreeController extends BaseController {
                 foreach ($children as $key => $value) {
                     $tmpString .= "<div class='entry sole'>
                      <span class='label'>
-                            ".$value['name'] ."
+                            <a href='d/".$value['name']."'> ".$value['name'] ."</a>
                         <i class='glyphicon glyphicon-chevron-right pull-right expand-tree' data-classification='$value[taxa_name]' data-id='$value[id]'></i>
                      </span>
                      </div>";
@@ -39,7 +39,7 @@ class TreeController extends BaseController {
                 foreach ($children as $key => $value) {
                     $tmpString .= "<div class='entry'>
                      <span class='label'>
-                            ".$value['name'] ."
+                            <a href='d/".$value['name']."'> ".$value['name'] ."</a>
                         <i class='glyphicon glyphicon-chevron-right pull-right expand-tree' data-classification='$value[taxa_name]' data-id='$value[id]' ></i>
                      </span>
                      </div>";
