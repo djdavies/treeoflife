@@ -10,8 +10,9 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+
     Route::get('/', function(){
-        return Redirect::route('tree');
+        return Redirect::to('tree');
     });
 
     //controller for controlling the tree view of the website.
@@ -32,28 +33,19 @@
 
     //Authorisation these cannot be done unless the user is logged in
     Route::group(array('before'=>'auth'), function(){
-        Route::get('create/{classification}', 'DescritionController@createTaxon');
-        Route::get('edit/{classification}', 'DescritionController@editDescription');
-        Route::get('delete/{classification}', 'DescritionController@deleteDescription');
+        Route::get('create/{classification}', 'DescriptionController@createTaxon');
+        Route::get('edit/{classification}', 'DescriptionController@editDescription');
+        Route::get('delete/{classification}', 'DescriptionController@deleteDescription');
     });
 
 	Route::post('d/{classification}', 'DescriptionController@postNew');
+	Route::put('d/{classification}', 'DescriptionController@sendEdits');
+	Route::delete('d/{classification}', 'DescriptionController@deleteTaxon');
 
-	Route::put('species/{species}', function(species $species){
-		$species->update(Input::all());
-		return Redirect::to('species/'.$species->id)
-			->with('message', 'Successfully updated a Species!');
-	});
 
-	Route::delete('species/{species}', function(species $species){
-		if(Auth::user()->canEdit($species)){
-			$species->delete();
-			return Redirect::to('species/', $species->id)
-				->with('message', 'Successfully deleted a Species!');
-		}else{
-			return Redirect::to('species/'.$species->id);
-		}
-	});
+    //making the posts page
+    Route::get('user/posts', 'RecentPostsController@getUserPosts');
+
 
 	View::composer('classification.edit', function($view){
 		$classes = Genus::all();

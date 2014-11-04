@@ -24,17 +24,29 @@
 		          </form>
 		          
 						<ul class="nav navbar-nav navbar-left">
-							<li><a href="search">Explore</a></li>
-							<li><a href="#">Features</a></li>
+							<li><a href="/search">Explore</a></li>
+							<li><a href="/posts">Recent Posts</a></li>
 							<li><a href="#">Enterprise</a></li>
-							<li><a href="#">Blogs</a></li>
 						</ul>
 
 						<span class="nav pull-right right-buffer">
 							@if(Auth::check())
-								Logged in as   
-	 							<strong>{{{Auth::user()->username}}}</strong>
-	 							{{link_to('logout', 'Log Out', ['class' => 'btn navbar-btn'])}}
+							    <!-- when user is logged in -->
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default navbar-btn padding-bottom">{{{ Auth::user()->username }}}</button>
+                                        <button type="button" class="btn btn-default dropdown-toggle navbar-btn padding-bottom" data-toggle="dropdown">
+                                        <span class="caret"></span>
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+
+                                    <ul class="dropdown-menu pull-right " role="menu">
+                                        <li><a href="user/posts">Recent Submissions</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li>{{ link_to('logout', 'Log Out') }}</li>
+                                    </ul>
+                                </div>
 	 						@else
 								<button type="button" class="btn btn-success navbar-btn" id="sign_in">Sign in</button>
 								<button type="button" class="btn btn-default navbar-btn" id="sign_out">Sign up</button>

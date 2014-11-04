@@ -32,15 +32,15 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	}
 
 	public function submission(){
-		return $this->hasMany('Submissions');
+		return $this->hasMany('Submission');
 	}
 
 	public function owns(Submission $submission){
 		return $this->id == $submission->owner;
 	}
 
-	public function canEdit(){
-		if($this->is_user_level === 0){
+	public function canEditPages(){
+		if($this->is_user_level < 2 ){
 			return true;
 		}else{
 			return false;

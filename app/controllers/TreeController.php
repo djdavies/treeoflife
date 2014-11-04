@@ -12,7 +12,7 @@ class TreeController extends BaseController {
         $taxa = new Taxon;
         $items = Taxon::where('taxa.taxa_name', '=', 1 )->get();
 
-        return View::make('classification.class')
+        return View::make('tree')
             ->with("classification", $items)
             ->with("taxa", $taxa);
     }

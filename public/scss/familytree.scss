@@ -154,7 +154,7 @@ body {
 }
 
 .padding-top{
-  padding-top: 3%;
+  padding-top: 2%;
 }
 
 .dropdown-menu, .searchbar{
@@ -185,6 +185,17 @@ body {
 }
 
 .search-results h2, p{
-
   font-size: 14px;
+}
+
+textarea{
+  resize: none;
+}
+
+.right-buffer{
+  margin-right: 2%;
+}
+
+.padding-bottom{
+  margin-bottom: 0px;
 }
