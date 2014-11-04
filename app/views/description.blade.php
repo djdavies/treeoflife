@@ -3,9 +3,9 @@
  	@section('header')
         <div class="row">
             <h2>
-                {{ $item[0]->name }}
+                {{{ $item[0]->name }}}
             </h2>
-             <a href="{{url('edit/'.$item[0]->name)}}">
+             <a href="{{{url('edit/'.$item[0]->name)}}}">
                 <i class="glyphicon glyphicon-edit">Edit</i>
              </a>
  		</div>
@@ -15,7 +15,7 @@
         <div class="row">
 
             <div class="col-md-8">
-                {{$item[0]->summary}}
+                {{{$item[0]->summary}}}
             </div>
             <div class="col-md-4">
                 <table>
