@@ -1,35 +1,37 @@
 <?php
-    /**
-     * User: Aled
-     * Date: 29/10/2014
-     * Time: 09:53
-     */
-    class Taxon extends Eloquent{
-        public $timestamps = false;
-        public $table = 'taxa';
+	/**
+ * User: Aled
+ * Date: 29/10/2014
+ * Time: 09:53
+ *
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Taxonomy[] $taxonomies
+ */
+	class Taxon extends Eloquent{
+		public $timestamps = false;
+		public $table = 'taxa';
 
-        public function taxonomies(){
-            $this->hasMany('Taxonomy');
-        }
+		public function taxonomies(){
+			$this->hasMany('Taxonomy');
+		}
 
-        //The purpose of this is to get all the children of a given parent node
-        public function getChildren($parentId = 0){
-            $children = $this::where('taxa.parent_id', $parentId )->get()->toArray();
-            return $children;
-        }
+		//The purpose of this is to get all the children of a given parent node
+		public function getChildren($parentId = 0){
+			$children = $this::where('taxa.parent_id', $parentId )->get()->toArray();
+			return $children;
+		}
 
-        public function getParent(){
-        }
+		public function getParent(){
+		}
 
 
 
-        public function getAncestors(){
+		public function getAncestors(){
 
-        }
+		}
 
-        private function getTableName(){
-            return 'links_tables';
-        }
+		private function getTableName(){
+			return 'links_tables';
+		}
 
 
 
@@ -73,4 +75,4 @@
 //            }
 //        }
 
-    }
+	}

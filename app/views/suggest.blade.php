@@ -14,28 +14,31 @@
 	@stop
 	
     @section('content')
-        {{ Form::model($taxa, ['method' => $method, 'url'=>
-         'd/'.$taxon[0]->name]) }}
+        {{ Form::model($taxa, ['method' => $method, 'url'=> 'd/'.$taxon[0]->name]) }}
             @if($method !== 'delete')
-                <div class="row">
+                <div class="row edit-page">
+                    <div class="col-md-6">
+                        <p>Common Name</p>
+                        {{ Form::text('common_name', $taxon[0]->common_name, ['class' => 'col-md-12'])  }}
+                    </div>
+                    <div class="col-md-6">
+                        <p>Scientific Name</p>
+                        {{ Form::text('scientific_name', $taxon[0]->scientific_name, ['class' => 'col-md-12'])  }}
+                    </div>
+                </div>
+
+                <div class="row edit-page">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <div class="col-md-8">
-                                <h3 class="">Summary</h3>
-                                {{ Form::textArea('summary', $taxon[0]->summary, ['class' => 'col-md-12']) }}
-                            </div>
-
-                            <div class="col-md-4">
-                                <h3 class="">Contents</h3>
-                                {{ Form::textArea('contents', $taxon[0]->contents, ['class' => 'col-md-12']) }}
-                            </div>
+                            <p class="padding-top">Summary</p>
+                            {{ Form::textArea('summary', $taxon[0]->summary, ['class' => 'col-md-12']) }}
                         </div>
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row edit-page">
                     <div class="col-md-12">
-                        <h3 class="padding-top">Full Description</h3>
+                        <p class="padding-top">Full Description</p>
                         {{ Form::textArea('description', $taxon[0]->description, ['class' => 'col-md-12']) }}
                     </div>
                 </div>

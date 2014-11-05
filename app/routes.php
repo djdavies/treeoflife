@@ -1,4 +1,4 @@
- <?php
+<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -11,70 +11,49 @@
 |
 */
 
-    Route::get('/', function(){
-        return Redirect::to('tree');
-    });
-
-    //controller for controlling the tree view of the website.
-    Route::get('tree', 'TreeController@showTree');
-    Route::get('tree/child', 'TreeController@getChildren');
-
-
-    // controler for searching the database
-    Route::get('searchbar', 'SearchController@searchbar');
-    Route::get('search', 'SearchController@search');
-    Route::post('search', 'SearchController@search');
-
-    Route::get('searchbar', 'SearchController@searchbar');
-    Route::get('search', 'SearchController@search');
-
-    // Managing the description view and editing documents
-    Route::get('d/{classification}', 'DescriptionController@getDescription' );
-
-    //Authorisation these cannot be done unless the user is logged in
-    Route::group(array('before'=>'auth'), function(){
-        Route::get('create/{classification}', 'DescriptionController@createTaxon');
-        Route::get('edit/{classification}', 'DescriptionController@editDescription');
-        Route::get('delete/{classification}', 'DescriptionController@deleteDescription');
-    });
-
-	Route::post('d/{classification}', 'DescriptionController@postNew');
-	Route::put('d/{classification}', 'DescriptionController@sendEdits');
-	Route::delete('d/{classification}', 'DescriptionController@deleteTaxon');
-
-
-    //making the posts page
-    Route::get('user/posts', 'RecentPostsController@getUserPosts');
-
-
-	View::composer('classification.edit', function($view){
-		$classes = Genus::all();
-		if(count($classes)>0){
-			$classes_options = array_combine($classes->lists('id'),
-										   $classes->lists('name'));
-		}else{
-			$classes_options = array_combine(NULL, 'Unspecified');
-		}
-
-		$view->with('classes_options', $classes_options);
+	Route::get('/', function(){
+		return Redirect::to('tree');
 	});
 
-Route::get('login', function(){
-	return View::make('login');
-});
+	//controller for controlling the tree view of the website.
+	Route::get('tree', 'TreeController@showTree');
+	Route::get('tree/child', 'TreeController@getChildren');
 
-Route::post('login', function(){
-	if(Auth::attempt(Input::only('username', 'password'))) {
-		return Redirect::intended('/');
-	} else {
-		return Redirect::intended('/login')
-			->withInput()
-			->with('error', "Invalid credentials");
-	}
-});
+	// controler for searching the database
+	Route::get('searchbar', 'SearchController@searchbar');
+	Route::get('search', 'SearchController@search');
+	Route::post('search', 'SearchController@search');
 
-Route::get('logout', function(){
-	Auth::logout();
-	return Redirect::to('/')
-		->with('message', 'You are now logged out');
-});
+	Route::get('searchbar', 'SearchController@searchbar');
+	Route::get('search', 'SearchController@search');
+
+	// Managing the description view
+	Route::get('d/{classification}', 'DescriptionController@getDescription' );
+
+	//Authorisation these cannot be done unless the user is logged in
+	Route::group(array('before'=>'auth'), function(){
+		Route::get('suggestion', 'DescriptionController@comment');
+	});
+
+	Route::put('suggestion', 'DescriptionController@sendSuggestion');
+
+
+	Route::get('login', function(){
+		return View::make('login');
+	});
+
+	Route::post('login', function(){
+		if(Auth::attempt(Input::only('username', 'password'))) {
+			return Redirect::intended('/');
+		} else {
+			return Redirect::intended('/login')
+				->withInput()
+				->with('error', "Invalid credentials");
+		}
+	});
+
+	Route::get('logout', function(){
+		Auth::logout();
+		return Redirect::to('/')
+			->with('message', 'You are now logged out');
+	});

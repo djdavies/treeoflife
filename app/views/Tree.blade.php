@@ -1,25 +1,24 @@
 @extends('master')
-	@section('header')
-		<h2> 
-			Tree of Life
-		</h2>
-		@stop
+    @section('header')
+    <h2>
+        Tree of Life
+    </h2>
+    @stop
 
-		@section('content')
-            <div class="row padding-top">
-                <div class="col-md-12">
-                    @foreach($classification as $content)
-                        <div id="wrapper">
-                            <div class="root">
-                                <span class="label"> <a href="d/{{ $content->name }}">{{ $content->name }}</a>
-                                    <i class="glyphicon glyphicon-chevron-right pull-right expand-tree"
+    @section('content')
+        <div class="row padding-top">
+            <div class="col-md-12">
+                @foreach($classification as $content)
+                    <div id="wrapper">
+                        <div class="root">
+                            <span class="label"> <a href="d/{{ $content->name }}">{{ $content->name }}</a>
+                                 <i class="glyphicon glyphicon-chevron-right pull-right expand-tree"
                                     data-classification="{{ $content->taxa_name }}"
-                                    data-id="{{ $content->id }}"></i>
-                                </span>
-                            </div>
+                                         data-id="{{ $content->id }}"></i>
+                            </span>
                         </div>
-                    @endforeach
-                </div>
+                    </div>
+                @endforeach
             </div>
-		@stop
-	
+        </div>
+    @stop

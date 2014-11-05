@@ -29,10 +29,8 @@
                     <div class="row">
                         <div class="col-md-12">
                             <p>{{ $content->summary }} - <a href="/d/{{ $content->name }}">show details</a></p>
-
                         </div>
                     </div>
-
                 </div>
             @endforeach
         </div>

@@ -5,8 +5,8 @@
             <h2>
                 {{{ $item[0]->name }}}
             </h2>
-             <a href="{{{url('edit/'.$item[0]->name)}}}">
-                <i class="glyphicon glyphicon-edit">Edit</i>
+             <a href="/suggestion">
+                <i class="glyphicon glyphicon-edit"></i> Make Suggestion
              </a>
  		</div>
  	@stop
@@ -24,7 +24,7 @@
                     </tr>
                 </table>
             </div>
-            </div>
+        </div>
 
  		<!-- Item description -->
  		<div class="row">
