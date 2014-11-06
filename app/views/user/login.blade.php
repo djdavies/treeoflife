@@ -1,4 +1,4 @@
-@extends('master')
+@extends('...master')
 	@section('header')
 		<h2>Please Log in</h2>
 	@stop

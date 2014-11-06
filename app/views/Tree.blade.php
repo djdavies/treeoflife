@@ -1,4 +1,9 @@
 @extends('master')
+    @section('head')
+        @parent
+        <title>Project Yggdrasil - Tree View</title>
+    @stop
+
     @section('header')
     <h2>
         Tree of Life

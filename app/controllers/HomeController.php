@@ -17,7 +17,7 @@
 
 		public function showWelcome()
 		{
-			return View::make('hello');
+			Redirect::to('treeView');
 		}
 
 	}

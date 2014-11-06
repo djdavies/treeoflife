@@ -11,12 +11,9 @@
 |
 */
 
-	Route::get('/', function(){
-		return Redirect::to('tree');
-	});
-
+	Route::get('/', 'HomeController@showWelcome');
 	//controller for controlling the tree view of the website.
-	Route::get('tree', 'TreeController@showTree');
+	Route::get('tree', ['uses' => 'TreeController@showTree', 'as' => 'treeView']);
 	Route::get('tree/child', 'TreeController@getChildren');
 
 	// controler for searching the database
@@ -31,25 +28,19 @@
 	Route::get('d/{classification}', 'DescriptionController@getDescription' );
 
 	//Authorisation these cannot be done unless the user is logged in
-	Route::group(array('before'=>'auth'), function(){
+	Route::group(['before'=>'auth'], function(){
 		Route::get('suggestion', 'DescriptionController@comment');
 	});
 
-	Route::put('suggestion', 'DescriptionController@sendSuggestion');
+	//User can only see these pages as guest once logged in default to homepage
+	Route::group(['before' => 'guest'], function(){
+		Route::get('/user/create', ['uses' =>'UserController@getCreateUser', 'as' => 'getCreate']);
+		Route::get('/user/login', 'UserController@getLogin');
 
-
-	Route::get('login', function(){
-		return View::make('login');
-	});
-
-	Route::post('login', function(){
-		if(Auth::attempt(Input::only('username', 'password'))) {
-			return Redirect::intended('/');
-		} else {
-			return Redirect::intended('/login')
-				->withInput()
-				->with('error', "Invalid credentials");
-		}
+		Route::group(['before' => 'csrf'], function(){
+			Route::post('/user/create', ['uses' => 'UserController@postCreateUser', 'as' => 'userCreate']);
+			Route::post('/user/login', 'UserController@postLogin');
+		});
 	});
 
 	Route::get('logout', function(){
