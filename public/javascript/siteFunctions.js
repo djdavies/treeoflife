@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
 	$("#sign_in").click(function() {
-		$("#sign_out").slideToggle(1);
+		$(".sign_up").slideToggle(1);
 		$(this).slideToggle(1);
 		$(".input-hide").slideToggle(250);
 	});
@@ -87,5 +87,10 @@ $(document).ready(function(){
             }
         });
     });
+
+	//JS for the forum part of the website
+	$("button.submit_topic").click(function(){
+		$("form.submit_topic").submit();
+	})
 
 });

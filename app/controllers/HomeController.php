@@ -17,7 +17,7 @@
 
 		public function showWelcome()
 		{
-			Redirect::to('treeView');
+			return Redirect::to('/tree');
 		}
 
 	}

@@ -20,12 +20,12 @@
 
                 <div class="form-group">
                     {{ Form::label('password', 'Password: ') }}
-                    {{ Form::password('password', ['type' => 'password', 'class' => 'form-control']) }}
+                    {{ Form::password('password', ['class' => 'form-control']) }}
                 </div>
 
                 <div class="form-group">
                     {{ Form::label('confirm_password', 'Confirm Password: ') }}
-                    {{ Form::password('confirm_password', ['type' => 'password', 'class' => 'form-control']) }}
+                    {{ Form::password('confirm_password', ['class' => 'form-control']) }}
                 </div>
                 {{ Form::submit('Submit',["class" => "btn btn-success navbar-btn pull-right"]) }}
             {{ Form::close() }}

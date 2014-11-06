@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration {
 			$table->string('username');
 			$table->string('password');
 			$table->enum('isAdmin', [0, 1, 2, 3])->default(0);
+			$table->string('remember_token');
 			$table->timestamps();
 		});
 	}

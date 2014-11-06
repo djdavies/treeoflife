@@ -141,8 +141,11 @@ textarea {
 .right-buffer {
   margin-right: 2%; }
 
-.padding-bottom {
-  margin-bottom: 0px; }
+.no-padding {
+  padding: 0; }
 
-.edit-page p {
-  font-size: 20px; }
+.no-padding .list-group {
+  margin-bottom: 0; }
+
+.no-padding .list-group-item:first-child {
+  border-radius: 0; }

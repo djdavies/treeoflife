@@ -32,6 +32,18 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 			return $this->getKey();
 		}
 
+		public function getRememberToken(){
+			return $this->remeber_token;
+		}
+
+		public function setRememberToken($remember_token){
+			return $this->remember_token = $remember_token;
+		}
+
+		public function getRemeberTokenName(){
+			return 'remeber_token';
+		}
+
 		public function getAuthPassword(){
 			return $this->password;
 		}
@@ -44,8 +56,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 			return $this->id == $submission->owner;
 		}
 
-		public function canEditPages(){
-			if($this->is_user_level < 2 ){
+		public function isSiteAdmin(){
+			if($this->isAdmin == 3){
 				return true;
 			}else{
 				return false;

@@ -12,7 +12,7 @@
 		}
 
 		public function getLogin(){
-			return 'login page';
+			return View::make('user.login');
 		}
 
 		public function postCreateUser(){
@@ -39,12 +39,31 @@
 		}
 
 		public function postLogin(){
-			if(Auth::attempt(Input::only('username', 'password'))) {
-				return Redirect::intended('/');
-			} else {
-				return Redirect::intended('/login')
-					->withInput()
-					->with('error', "Invalid credentials");
+			$validator = Validator::make(Input::all(),
+				[
+					'username' => 'required',
+					'password' => 'required',
+				]);
+
+			if($validator->fails()){
+				return Redirect::route('getLogin')->withErrors($validator)->withInput();
+			}else{
+				$remember = Input::has('remember')
+					? true
+					: false;
+				if(Auth::attempt(Input::only('username', 'password'), $remember)) {
+					return Redirect::intended('/');
+				} else {
+					return Redirect::route('getLogin')
+						->withInput()
+						->with('error', "Invalid credentials, please try again");
+				}
 			}
+		}
+
+		public function getLogout(){
+			Auth::logout();
+			return Redirect::route('home')
+				->with('message', 'You are now logged out');
 		}
 	}

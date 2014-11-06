@@ -32,9 +32,8 @@ class CreateTaxonomyTableUpdates extends Migration {
     {
         Schema::drop('taxonomies');
         Schema::table('taxa', function($table){
-            $table->dropColumn('taxa_name');
+	        $table->dropColumn( 'taxa_name' );
             $table->integer('level');
         });
-    }
-
+	}
 }

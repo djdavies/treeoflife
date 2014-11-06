@@ -34,7 +34,7 @@ class CreateLinksTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('taxa_name');
+		Schema::drop('taxa');
 	}
 
 }
