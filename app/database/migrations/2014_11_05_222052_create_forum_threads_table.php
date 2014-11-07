@@ -16,7 +16,7 @@ class CreateForumThreadsTable extends Migration {
 			$table->increments('id');
 			$table->string('title');
 			$table->text('body');
-			$table->integer('group_id');
+			$table->integer('topic_id');
 			$table->integer('category_id');
 			$table->integer('author_id');
 			$table->timestamps();

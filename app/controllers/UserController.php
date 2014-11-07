@@ -23,7 +23,7 @@
 	                    'confirm_password' => 'required|same:password',
 	                ]);
 			if($validate->fails()){
-				Redirect::route('getCreate')->withErrors($validate)->withInput();
+				return Redirect::route('getCreate')->withErrors($validate)->withInput();
 			}else{
 				$user = new User;
 				$user->username = Input::get('username');
@@ -39,6 +39,7 @@
 		}
 
 		public function postLogin(){
+
 			$validator = Validator::make(Input::all(),
 				[
 					'username' => 'required',

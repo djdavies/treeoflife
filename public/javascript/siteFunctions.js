@@ -91,6 +91,11 @@ $(document).ready(function(){
 	//JS for the forum part of the website
 	$("button.submit_topic").click(function(){
 		$("form.submit_topic").submit();
-	})
+	});
+
+    $("a.delete_topic").click(function(event){
+        var id = $(event.target).data("id");
+        $('.btn-delete-topic').prop('href', '/forum/topic/'+id+'/delete');
+    });
 
 });

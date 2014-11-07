@@ -9,7 +9,7 @@
 	    <h2>Forums</h2>
 	    @if(Auth::check() && Auth::user()->isSiteAdmin())
             <div>
-                <a class="btn btn-default" data-toggle="modal" data-target="#topic_form">
+                <a class="btn btn-default" data-toggle="modal" data-target="#topic_title">
                     Add Topic <i class="glyphicon glyphicon-plus-sign" ></i>
                 </a>
             </div>
@@ -22,7 +22,10 @@
                 <div class="col-md-8 col-md-offset-2">
                     <div class="panel panel-success">
                         <div class="panel-heading">
-                            <h3 class="panel-title">{{ $topic->title }}</h3>
+                            <div class="clearfix">
+                                <h3 class="panel-title pull-left">{{ $topic->title }}</h3>
+                                <a href="#" data-id="{{ $topic->id }}" data-toggle="modal" data-target="#topic_delete" class="btn btn-danger btn-xs pull-right delete_topic">Delete</a>
+                            </div>
                         </div>
 
                         <div class="panel-body no-padding">
@@ -40,33 +43,56 @@
 	    </div>
 
 	    @if(Auth::check() && Auth::user()->isSiteAdmin())
-            <div class="modal fade" id="topic_form" tabindex="-1" role="dialog" aria-hidden="true">
+	        {{--submit new topic--}}
+            <div class="modal fade" id="topic_title" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog">
-                    <div class="modal-header">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">
-                                    <span aria-hidden="true">&times;</span>
-                                    <span class="sr-only">Close</span>
-                                </button>
-                                <h4 class="modal-title">New Topic</h4>
-                            </div>
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">&times;</span>
+                                <span class="sr-only">Close</span>
+                            </button>
+                            <h4 class="modal-title">New Topic</h4>
+                        </div>
 
-                            <div class="modal-body">
-                                {{ Form::open(['class' => 'submit_topic', 'method' => 'post', 'route' => 'postTopic']) }}
-                                    <div class="form-group {{ $errors->has('topic_name') ? 'has-error' : "" }}">
-                                        {{ Form::label('topic_name', 'Topic Name') }}
-                                        {{ Form::text('topic_title', '', ['class'=> 'form-control']) }}
-                                        @if($errors->has('topic_name'))
-                                            {{ $errors->first('topic_name') }}
-                                        @endif
-                                    </div>
-                                {{ Form::close() }}
-                            </div>
+                        <div class="modal-body">
+                            {{ Form::open(['class' => 'submit_topic', 'method' => 'post', 'route' => 'postTopic']) }}
+                                <div class="form-group {{ $errors->has('topic_title') ? 'has-error' : '' }}">
+                                   {{ Form::label('topic_title', 'Topic Title') }}
+                                   {{ Form::text('topic_title', '', ['class'=> 'form-control']) }}
+                                   @if($errors->has('topic_title'))
+                                       <p>{{ $errors->first('topic_title') }}</p>
+                                   @endif
+                                </div>
+                            {{ Form::close() }}
+                        </div>
 
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-success submit_topic" data-dismiss="modal">Save</button>
-                            </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success submit_topic">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{--delete a topic--}}
+            <div class="modal fade" id="topic_delete" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">&times;</span>
+                                <span class="sr-only">Close</span>
+                            </button>
+                            <h4 class="modal-title">Delete Topic</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <h3>Are you sure you want to delete this topic?</h3>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            <a href="#" type="button" class="btn btn-danger btn-delete-topic">Delete</a>
                         </div>
                     </div>
                 </div>
@@ -78,7 +104,7 @@
 	    @parent
 	    @if(Session::has('modal'))
             <script type="text/javascript">
-                $( "{{ Session::get('modal') }}" ).modal('show')
+                $( "{{ Session::get('modal') }} ").modal('show');
             </script>
 	    @endif
 	@stop

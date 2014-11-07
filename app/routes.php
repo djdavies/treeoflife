@@ -55,7 +55,10 @@
 		Route::get('/category/{id}', ['uses' => 'ForumController@getTopicCategory', 'as' => 'getTopicCategories']);
 		Route::get('/thread/{id}', ['uses' => 'ForumController@getForumThread', 'as' => 'getThread']);
 
-		Route::group(['before' => 'auth'], function(){
+		Route::group(['before' => 'siteAdmin'], function(){
+
+            Route::get('/topic/{id}/delete', ['uses' => 'ForumController@deleteTopic', 'as' => 'deleteTopic']);
+
 			Route::group(['before' => 'csrf'], function(){
 				Route::post('/topic', ['uses' => 'ForumController@postTopic', 'as' => 'postTopic']);
 			});

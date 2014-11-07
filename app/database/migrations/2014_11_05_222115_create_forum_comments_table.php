@@ -15,7 +15,7 @@ class CreateForumCommentsTable extends Migration {
 		Schema::create('forum_comments', function(Blueprint $table){
 			$table->increments('id');
 			$table->text('body');
-			$table->integer('group_id');
+			$table->integer('topic_id');
 			$table->integer('thread_id');
 			$table->integer('category_id');
 			$table->integer('author_id');

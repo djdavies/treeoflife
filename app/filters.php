@@ -48,6 +48,13 @@ Route::filter('auth', function()
 	}
 });
 
+Route::filter('siteAdmin', function()
+{
+    if (!(Auth::check() && Auth::user()->isSiteAdmin())) {
+        return Redirect::route('home');
+    }
+});
+
 
 Route::filter('auth.basic', function()
 {
