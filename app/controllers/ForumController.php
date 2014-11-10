@@ -56,12 +56,12 @@
                 return Redirect::route('getForum')->with('error', 'This Topic does not exist');
             }
 
-            $delCategories = ForumCategory::where('topic_id', '=', $id)->delete();
-            $delThreads = ForumThread::where('topic_id', '=', $id)->delete();
-            $delComments = ForumComments::where('topic_id', '=', $id)->delete();
+            ForumCategory::where('topic_id', '=', $id)->delete();
+            ForumThread::where('topic_id', '=', $id)->delete();
+            ForumComments::where('topic_id', '=', $id)->delete();
             $delTopics = $topic->delete();
 
-            if($delCategories && $delThreads && $delComments && $delTopics) {
+            if($delTopics) {
                 return Redirect::route('getForum')->with('success', 'This topic was deleted');
             }else{
                 return Redirect::route('getForum')->with('error', 'Was unable to Delete topic');

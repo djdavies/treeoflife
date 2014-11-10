@@ -1,8 +1,8 @@
 
 //------- {{ Variables }} -------//
-
+// #7ba73e;
 $black: black;
-$outlineColor: #7ba73e;
+$outlineColor: BLUE;
 $opacity: .5;
 @function fadeOutlineColour($opacity){
   @return rgba(149, 193, 87,$opacity)
@@ -27,7 +27,6 @@ $label-border-radius: 5px;
 }
 
 body {
-  min-width: 1200px;
   margin: 0;
   padding: 50px;
   font: 16px Verdana, sans-serif;
@@ -194,6 +193,10 @@ textarea{
 
 .right-buffer{
   margin-right: 2%;
+}
+
+.right-padding{
+  padding-right: 5%;
 }
 
 .no-padding{

@@ -1,25 +1,7 @@
 
 $(document).ready(function(){
 
-	$("#sign_in").click(function() {
-		$(".sign_up").slideToggle(1);
-		$(this).slideToggle(1);
-		$(".input-hide").slideToggle(250);
-	});
-	
-	$("form.login").keypress(function (e) {
-		if (e.which == 13) {
-			$('input.submit').click();
-		}
-	});
-
-	$('form.login').submit( function () {
-		var formInputs = $(this).find('input.form-control');
-		if(!checkInputFields(formInputs)){
-        	return false;
-        }
-    });
-
+	//JS handles the expanding and contracting of the tree view
     $('div.root').on('click', 'i.expand-tree', function(event){
         if($(event.target).parent().siblings('div.hidden').length >0){
             $(event.target).removeClass('glyphicon-chevron-right expand-tree')
@@ -49,37 +31,27 @@ $(document).ready(function(){
             .addClass('glyphicon-chevron-right expand-tree');
     });
 
-	function checkInputFields(inputs){
-		var isValid = true;
-		for(var i = 0; i < inputs.length; i++){
-			if (!$(inputs[i]).val()) {
-				$(inputs[i]).parent().addClass('has-error');
-				isValid = false;
-			}else{
-				$(inputs[i]).parent().removeClass('has-error');
-			}
-		}
-		return isValid;
-	}
-
+	//search results for the website
     var $searchResults = $('.results');
     $('input.searchbar').on('paste propertychange input', function () {
+
         var input = $('input.searchbar').val();
         if (input.length && $searchResults.hasClass('hidden'))
             $searchResults.removeClass('hidden');
         else if (!input.length && !$searchResults.hasClass('hidden')) {
             $searchResults.addClass('hidden');
         }
+
         $("ul.dropdown-menu.results").empty();
 
         $.ajax({
             type: "get",
-            url: "searchbar",
+            url: "search/searchbar",
             data: 'input=' + input,
             success: function (data) {
-                if(data.length){
+                if(data.length > 0){
                     for (var i = 0; i < data.length; i++) {
-                        $("<li>" + data[i].taxa_name + ": " + data[i].name + "</li>").appendTo("ul.dropdown-menu.results");
+                        $("<li><a href='d/"+data[i].name+"'>" + data[i].taxa_name + ": " + data[i].name + "</a></li>").appendTo("ul.dropdown-menu.results");
                     }
                 }else{
                     $("<li>No Results available</li>" ).appendTo("ul.dropdown-menu.results");
@@ -97,5 +69,22 @@ $(document).ready(function(){
         var id = $(event.target).data("id");
         $('.btn-delete-topic').prop('href', '/forum/topic/'+id+'/delete');
     });
+
+
+	//JS functions to modularise common tasks to be used again
+
+	//check input fields with ajax
+	function checkInputFields(inputs){
+		var isValid = true;
+		for(var i = 0; i < inputs.length; i++){
+			if (!$(inputs[i]).val()) {
+				$(inputs[i]).parent().addClass('has-error');
+				isValid = false;
+			}else{
+				$(inputs[i]).parent().removeClass('has-error');
+			}
+		}
+		return isValid;
+	}
 
 });

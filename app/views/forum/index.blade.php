@@ -24,7 +24,9 @@
                         <div class="panel-heading">
                             <div class="clearfix">
                                 <h3 class="panel-title pull-left">{{ $topic->title }}</h3>
-                                <a href="#" data-id="{{ $topic->id }}" data-toggle="modal" data-target="#topic_delete" class="btn btn-danger btn-xs pull-right delete_topic">Delete</a>
+	                            @if(Auth::check() && Auth::user()->isSiteAdmin())
+                                    <a href="#" data-id="{{ $topic->id }}" data-toggle="modal" data-target="#topic_delete" class="btn btn-danger btn-xs pull-right delete_topic">Delete</a>
+                                @endif
                             </div>
                         </div>
 
@@ -59,7 +61,7 @@
                             {{ Form::open(['class' => 'submit_topic', 'method' => 'post', 'route' => 'postTopic']) }}
                                 <div class="form-group {{ $errors->has('topic_title') ? 'has-error' : '' }}">
                                    {{ Form::label('topic_title', 'Topic Title') }}
-                                   {{ Form::text('topic_title', '', ['class'=> 'form-control']) }}
+                                   {{ Form::text('topic_title', '', ['class'=> 'form-control', "autocomplete" => "off"]) }}
                                    @if($errors->has('topic_title'))
                                        <p>{{ $errors->first('topic_title') }}</p>
                                    @endif

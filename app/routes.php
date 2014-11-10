@@ -16,13 +16,15 @@
 	Route::get('tree', ['uses' => 'TreeController@showTree', 'as' => 'treeView']);
 	Route::get('tree/child', 'TreeController@getChildren');
 
-	// controler for searching the database
-	Route::get('searchbar', 'SearchController@searchbar');
-	Route::get('search', 'SearchController@search');
-	Route::post('search', 'SearchController@search');
+	Route::group(['prefix' => 'search'], function(){
+		// controler for searching the database
+		Route::get('searchbar', ['uses' => 'SearchController@searchbar', 'as' => 'searchbar']);
+		Route::get('/', ['uses' => 'SearchController@search', 'as' => 'search']);
+		Route::post('/', ['uses' => 'SearchController@search', 'as' => 'getSearchResults']);
+	});
 
-	Route::get('searchbar', 'SearchController@searchbar');
-	Route::get('search', 'SearchController@search');
+
+
 
 	// Managing the description view
 	Route::get('d/{classification}', 'DescriptionController@getDescription' );

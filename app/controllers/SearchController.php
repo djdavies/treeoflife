@@ -12,7 +12,7 @@
 			if (Request::ajax()) {
 				$result = Taxon::where('name', 'LIKE', "%" . $data . "%")->join('taxonomies', function ($join) {
 					$join->on('taxa.taxa_name', '=', 'taxonomies.id');
-				})->get();
+				})->take(5)->get();
 				return Response::json($result);
 			};
 		}

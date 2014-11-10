@@ -4,7 +4,6 @@
   box-sizing: border-box; }
 
 body {
-  min-width: 1200px;
   margin: 0;
   padding: 50px;
   font: 16px Verdana, sans-serif;
@@ -22,7 +21,7 @@ body {
   .branch:before {
     content: "";
     width: 50px;
-    border-top: 2px solid #7ba73e;
+    border-top: 2px solid blue;
     position: absolute;
     left: -100px;
     top: 50%;
@@ -34,13 +33,13 @@ body {
   .entry:before {
     content: "";
     height: 100%;
-    border-left: 2px solid #7ba73e;
+    border-left: 2px solid blue;
     position: absolute;
     left: -50px; }
   .entry:after {
     content: "";
     width: 50px;
-    border-top: 2px solid #7ba73e;
+    border-top: 2px solid blue;
     position: absolute;
     left: -50px;
     top: 50%;
@@ -61,7 +60,7 @@ body {
   .entry:last-child:after {
     height: 10px;
     border-top: none;
-    border-bottom: 2px solid #7ba73e;
+    border-bottom: 2px solid blue;
     border-radius: 0 0 0 10px;
     margin-top: -9px; }
   .entry.sole:before {
@@ -79,7 +78,7 @@ body {
   line-height: 20px;
   color: black;
   text-align: center;
-  border: 2px solid #7ba73e;
+  border: 2px solid blue;
   border-radius: 5px;
   position: absolute;
   left: 0;
@@ -91,9 +90,9 @@ body {
   line-height: 20px;
   color: black;
   text-align: center;
-  border-bottom: 1px solid #7ba73e;
-  border-left: 1px solid #7ba73e;
-  border-right: 1px solid #7ba73e;
+  border-bottom: 1px solid blue;
+  border-left: 1px solid blue;
+  border-right: 1px solid blue;
   position: relative; }
 
 .line-right {
@@ -101,7 +100,7 @@ body {
   line-height: 20px;
   color: black;
   text-align: center;
-  border-right: 1px solid #7ba73e;
+  border-right: 1px solid blue;
   position: relative; }
 
 .hidden {
@@ -140,6 +139,9 @@ textarea {
 
 .right-buffer {
   margin-right: 2%; }
+
+.right-padding {
+  padding-right: 5%; }
 
 .no-padding {
   padding: 0; }
