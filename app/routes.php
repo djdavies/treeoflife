@@ -11,10 +11,11 @@
 |
 */
 
+    // manages main views of the website
 	Route::get('/', ['uses' => 'HomeController@showWelcome', 'as' => 'home']);
-	//controller for controlling the tree view of the website.
 	Route::get('tree', ['uses' => 'TreeController@showTree', 'as' => 'treeView']);
 	Route::get('tree/child', 'TreeController@getChildren');
+    Route::get('d/{classification}', 'DescriptionController@getDescription' );
 
 	Route::group(['prefix' => 'search'], function(){
 		// controler for searching the database
@@ -22,12 +23,6 @@
 		Route::get('/', ['uses' => 'SearchController@search', 'as' => 'search']);
 		Route::post('/', ['uses' => 'SearchController@search', 'as' => 'getSearchResults']);
 	});
-
-
-
-
-	// Managing the description view
-	Route::get('d/{classification}', 'DescriptionController@getDescription' );
 
 	//Authorisation these cannot be done unless the user is logged in
 	Route::group(['before'=>'auth'], function(){
@@ -57,9 +52,25 @@
 		Route::get('/category/{id}', ['uses' => 'ForumController@getTopicCategory', 'as' => 'getTopicCategories']);
 		Route::get('/thread/{id}', ['uses' => 'ForumController@getForumThread', 'as' => 'getThread']);
 
-		Route::group(['before' => 'siteAdmin'], function(){
+        Route::group(['before' => 'auth'], function(){
+            Route::get('/thread/{id}/new', ['uses' => 'ForumController@newThread', 'as' => 'newThread']);
 
+            Route::group(['before' => 'csrf'], function(){
+                Route::post('/thread/{id}/new', ['uses' => 'ForumController@postThread', 'as' => 'postThread']);
+            });
+        });
+
+        Route::group(['before' => 'forumAdmin'], function(){
+            Route::get('/category/{id}/new', ['uses' => 'ForumController@newCategory', 'as' => 'newCategory']);
+
+            Route::group(['before' => 'csrf'], function(){
+                Route::post('/category/{id}/new', ['uses' => 'ForumController@postCategory', 'as' => 'postCategory']);
+            });
+        });
+
+		Route::group(['before' => 'siteAdmin'], function(){
             Route::get('/topic/{id}/delete', ['uses' => 'ForumController@deleteTopic', 'as' => 'deleteTopic']);
+            Route::get('/category/{id}/delete', ['uses' => 'ForumController@deleteCategory', 'as' => 'deleteCategory']);
 
 			Route::group(['before' => 'csrf'], function(){
 				Route::post('/topic', ['uses' => 'ForumController@postTopic', 'as' => 'postTopic']);

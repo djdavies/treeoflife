@@ -10,4 +10,16 @@
 
 		protected $table = 'forum_threads';
 
+        public function topics(){
+            return $this->belongsTo('ForumTopic');
+        }
+
+        public function categories(){
+            return $this->belongsTo('ForumCategory');
+        }
+
+        public function comments(){
+            return $this->hasMany('ForumComment', 'thread_id');
+        }
+
 	}

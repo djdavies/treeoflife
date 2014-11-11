@@ -24,8 +24,18 @@
                         <div class="panel-heading">
                             <div class="clearfix">
                                 <h3 class="panel-title pull-left">{{ $topic->title }}</h3>
-	                            @if(Auth::check() && Auth::user()->isSiteAdmin())
-                                    <a href="#" data-id="{{ $topic->id }}" data-toggle="modal" data-target="#topic_delete" class="btn btn-danger btn-xs pull-right delete_topic">Delete</a>
+	                            @if(Auth::check() && Auth::user()->isForumAdmin() || Auth::user()->isSiteAdmin())
+	                                <a class="btn btn-default btn-xs pull-right create_new_catagory" data-id="{{ $topic->id }}" data-toggle="modal" data-target="#category_title">
+                                        <i class="glyphicon glyphicon-plus-sign"></i>
+                                    </a>
+                                    @if(Auth::user()->isSiteAdmin())
+                                        <div class="pull-right">
+                                            <a href="#" data-id="{{ $topic->id }}" data-toggle="modal"
+                                                data-target="#topic_delete" class="btn btn-danger btn-xs pull-right delete_topic">
+                                                &times
+                                            </a>
+                                        </div>
+                                    @endif
                                 @endif
                             </div>
                         </div>
@@ -34,7 +44,9 @@
                             <div class="list-group ">
                                 @foreach($categories as $category)
                                     @if($category->topic_id == $topic->id)
-                                        <a class="list-group-item" href="{{ URL::route('getTopicCategories', $category->id) }}">{{ $category->title }}</a>
+                                        <a class="list-group-item" href="{{ URL::route('getTopicCategories', $category->id) }}">
+                                            {{ $category->title }}
+                                        </a>
                                     @endif
                                 @endforeach
                             </div>
@@ -71,6 +83,38 @@
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-success submit_topic">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{--submit new category--}}
+            <div class="modal fade" id="category_title" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">&times;</span>
+                                <span class="sr-only">Close</span>
+                            </button>
+                            <h4 class="modal-title">New Category</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            {{ Form::open(['class' => 'submit_category', 'method' => 'post', 'route' => 'postCategory']) }}
+                                <div class="form-group {{ $errors->has('category_title') ? 'has-error' : '' }}">
+                                   {{ Form::label('category_title', 'Category Title') }}
+                                   {{ Form::text('category_title', '', ['class'=> 'form-control', "autocomplete" => "off"]) }}
+                                   {{ Form::hidden('topic_id', '0', ['class' => 'hidden_topic_input']) }}
+                                   @if($errors->has('category_title'))
+                                       <p>{{ $errors->first('category_title') }}</p>
+                                   @endif
+                                </div>
+                            {{ Form::close() }}
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success submit_category">Save</button>
                         </div>
                     </div>
                 </div>

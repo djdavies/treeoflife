@@ -6,7 +6,19 @@
  * Time: 12:38
  */
 
-	class ForumComments extends Eloquent{
+	class ForumComment extends Eloquent{
 
 		protected $table = 'forum_comments';
+
+        public function topics(){
+            return $this->belongsTo('ForumTopic');
+        }
+
+        public function categories(){
+            return $this->belongsTo('ForumCategory');
+        }
+
+        public function threads(){
+            return $this->belongsTo('ForumThread');
+        }
 	}

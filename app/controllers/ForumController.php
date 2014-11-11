@@ -18,7 +18,16 @@
 		}
 
 		public function getTopicCategory($id) {
-			return View::make( 'forum.index' );
+            $category = ForumCategory::find($id);
+
+            if($category == null){
+                return Redirect::route('getForum')
+                    ->with('error', "The category you tried to view doesn't exist!");
+            }
+            $threads = $category->threads();
+			return View::make( 'forum.category' )
+                ->with('category', $category)
+                ->with('threads', $threads);
 		}
 
 		public function getForumThread($id) {
@@ -49,6 +58,31 @@
 			}
 		}
 
+        public function postCategory(){
+            $validator = Validator::make(Input::all(),
+                [
+                    'category_title' => 'required|unique:forum_categories,title'
+                ]);
+
+            if($validator->fails()){
+                return Redirect::route('getForum')
+                    ->withInput()
+                    ->withErrors($validator)
+                    ->with('modal', '#category_title');
+            }else{
+                $category = new ForumCategory;
+                $category->title = Input::get('category_title');
+                $category->author_id = Auth::id();
+                $category->topic_id = Input::get('topic_id');
+
+                if($category->save()){
+                    return Redirect::route('getForum')->with('success', 'The Category was Created');
+                }else{
+                    return Redirect::route('getForum')->with('fail', 'An Error Occurred while Saving');
+                }
+            }
+        }
+
         public function deleteTopic($id){
             $topic = ForumTopic::find($id);
 
@@ -56,9 +90,9 @@
                 return Redirect::route('getForum')->with('error', 'This Topic does not exist');
             }
 
-            ForumCategory::where('topic_id', '=', $id)->delete();
-            ForumThread::where('topic_id', '=', $id)->delete();
-            ForumComments::where('topic_id', '=', $id)->delete();
+            $topic->categories()->delete();
+            $topic->threads()->delete();
+            $topic->comments()->delete();
             $delTopics = $topic->delete();
 
             if($delTopics) {
@@ -66,6 +100,24 @@
             }else{
                 return Redirect::route('getForum')->with('error', 'Was unable to Delete topic');
             }
+        }
 
+        public function deleteCategory($id){
+            $category = ForumCategory::find($id);
+
+            if($category == null){
+                return Redirect::route('getForum')->with('error', 'This Topic does not exist');
+            }
+
+
+            $category->threads()->delete();
+            $category->comments()->delete();
+            $delCategory = $category->delete();
+
+            if($delCategory) {
+                return Redirect::route('getForum')->with('success', 'This category was deleted');
+            }else{
+                return Redirect::route('getForum')->with('error', 'Was unable to Delete category');
+            }
         }
 	}

@@ -65,9 +65,25 @@ $(document).ready(function(){
 		$("form.submit_topic").submit();
 	});
 
+    $("button.submit_category").click(function(){
+        $("form.submit_category").submit();
+    });
+
+    //change the value of the hidden input field to the topic_id
+    $("a.create_new_catagory").on('click', function(event){
+        var id = $(event.currentTarget).data("id");
+        console.log(id);
+        $(".hidden_topic_input").val(id);
+    });
+
     $("a.delete_topic").click(function(event){
         var id = $(event.target).data("id");
         $('.btn-delete-topic').prop('href', '/forum/topic/'+id+'/delete');
+    });
+
+    $("a.delete_category").click(function(event){
+        var id = $(event.target).data("id");
+        $('.btn-delete-category').prop('href', '/forum/category/'+id+'/delete');
     });
 
 

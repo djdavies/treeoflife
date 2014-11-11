@@ -17,6 +17,7 @@
 				->with("taxa", $taxa);
 		}
 
+
 		public function getChildren(){
 			$parent_id = Input::get('parent_id');
 			$taxon = new Taxon;

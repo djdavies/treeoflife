@@ -48,9 +48,18 @@ Route::filter('auth', function()
 	}
 });
 
+//For handling permission only for site admins
 Route::filter('siteAdmin', function()
 {
     if (!(Auth::check() && Auth::user()->isSiteAdmin())) {
+        return Redirect::route('home');
+    }
+});
+
+// Authorise Forum administration, allocated to Forum Admins and SiteAdmins
+Route::filter('forumAdmin', function()
+{
+    if (!(Auth::check() && (Auth::user()->isForumAdmin() || Auth::user()->isSiteAdmin()))) {
         return Redirect::route('home');
     }
 });
